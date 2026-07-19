@@ -1,0 +1,33 @@
+import serial
+import struct
+import time
+
+class LedStrip:
+
+    HEADER = b"\xAA\xBB"
+
+    def __init__(self, port):
+        self.ser = serial.Serial(
+            port=port,
+            baudrate=115200
+        )
+
+        time.sleep(2)
+
+    def send(self, colors):
+
+        packet = bytearray()
+
+        packet += self.HEADER
+        packet += struct.pack("<H", len(colors))
+
+        for r, g, b in colors:
+            packet.extend((r, g, b))
+
+        self.ser.write(packet)
+
+    def close(self):
+        self.ser.close()
+
+
+

@@ -1,0 +1,24 @@
+{
+  "num_leds": 113,
+  "fps": 30,
+  "screen_index": 0,
+  "border_depth_px": 300,
+  "start_corner": "bottom-left",
+  "direction": "counter-clockwise",
+  "led_sides": {
+    "bottom_left_count": 36,
+    "right_count": 21,
+    "top_count": 36,
+    "left_count": 20,
+    "bottom_right_count": 0
+  },
+  "gamma": 2.0,
+  "brightness": 1,
+  "saturation_boost": 4,
+  "transition_speed": 0.5,
+  "mode": "screen",
+  "sound_device": null,
+  "sound_effect": "ripples",
+  "sound_hue_speed": 0.1,
+  "sound_smoothing": 0.3
+}

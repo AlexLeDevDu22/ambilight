@@ -1,0 +1,926 @@
+[
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/CDC.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/CDC.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/CDC.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/CDC.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/HardwareSerial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/HardwareSerial.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/HardwareSerial0.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial0.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial0.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/HardwareSerial0.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/HardwareSerial1.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial1.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial1.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/HardwareSerial1.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/HardwareSerial2.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial2.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial2.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/HardwareSerial2.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/HardwareSerial3.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial3.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial3.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/HardwareSerial3.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/IPAddress.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/IPAddress.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/IPAddress.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/IPAddress.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/PluggableUSB.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/PluggableUSB.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/PluggableUSB.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/PluggableUSB.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/Print.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/Print.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/Print.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/Print.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/Stream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/Stream.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/Stream.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/Stream.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/Tone.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/Tone.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/Tone.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/Tone.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/USBCore.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/USBCore.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/USBCore.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/USBCore.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/FrameworkArduino/WInterrupts.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/WInterrupts.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/WInterrupts.c",
+        "output": ".pio/build/uno/FrameworkArduino/WInterrupts.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/WMath.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/WMath.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/WMath.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/WMath.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/WString.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/WString.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/WString.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/WString.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/abi.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/abi.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/abi.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/abi.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/FrameworkArduino/hooks.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/hooks.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/hooks.c",
+        "output": ".pio/build/uno/FrameworkArduino/hooks.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/main.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/main.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/main.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/FrameworkArduino/new.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/new.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/new.cpp",
+        "output": ".pio/build/uno/FrameworkArduino/new.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/FrameworkArduino/wiring.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring.c",
+        "output": ".pio/build/uno/FrameworkArduino/wiring.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/FrameworkArduino/wiring_analog.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_analog.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_analog.c",
+        "output": ".pio/build/uno/FrameworkArduino/wiring_analog.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/FrameworkArduino/wiring_digital.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_digital.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_digital.c",
+        "output": ".pio/build/uno/FrameworkArduino/wiring_digital.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -mmcu=atmega328p -x assembler-with-cpp -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard -c -o .pio/build/uno/FrameworkArduino/wiring_pulse.S.o /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.S",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.S",
+        "output": ".pio/build/uno/FrameworkArduino/wiring_pulse.S.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/FrameworkArduino/wiring_pulse.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.c",
+        "output": ".pio/build/uno/FrameworkArduino/wiring_pulse.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/FrameworkArduino/wiring_shift.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_shift.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_shift.c",
+        "output": ".pio/build/uno/FrameworkArduino/wiring_shift.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib5f3/SoftwareSerial/SoftwareSerial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp",
+        "output": ".pio/build/uno/lib5f3/SoftwareSerial/SoftwareSerial.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libabf/SPI/SPI.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard /Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src/SPI.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src/SPI.cpp",
+        "output": ".pio/build/uno/libabf/SPI/SPI.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/FastLED.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/FastLED.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/FastLED.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/FastLED.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/bitswap.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/bitswap.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/bitswap.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/bitswap.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/cled_controller.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/cled_controller.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/cled_controller.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/cled_controller.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/colorpalettes.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/colorpalettes.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/colorpalettes.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/colorpalettes.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/crgb.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/crgb.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/crgb.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/crgb.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/allocator.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/allocator.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/allocator.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/allocator.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/async.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/async.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/async.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/async.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/audio.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/audio.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/audio.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/audio.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/audio_input.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/audio_input.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/audio_input.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/audio_input.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/audio_reactive.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/audio_reactive.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/audio_reactive.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/audio_reactive.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/bitset.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/bitset.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/bitset.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/bitset.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/blur.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/blur.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/blur.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/blur.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/bytestreammemory.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/bytestreammemory.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/bytestreammemory.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/bytestreammemory.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/colorutils.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/colorutils.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/colorutils.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/colorutils.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/corkscrew.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/corkscrew.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/corkscrew.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/corkscrew.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/crgb_hsv16.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/crgb_hsv16.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/crgb_hsv16.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/crgb_hsv16.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/downscale.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/downscale.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/downscale.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/downscale.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/ease.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/ease.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/ease.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/ease.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/engine_events.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/engine_events.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/engine_events.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/engine_events.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/fetch.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/fetch.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/fetch.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/fetch.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/fft.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/fft.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/fft.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/fft.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/fft_impl.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/fft_impl.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/fft_impl.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/fft_impl.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/file_system.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/file_system.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/file_system.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/file_system.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/fill.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/fill.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/fill.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/fill.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/gamma.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/gamma.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/gamma.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/gamma.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/gradient.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/gradient.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/gradient.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/gradient.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/hsv16.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/hsv16.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/hsv16.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/hsv16.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/id_tracker.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/id_tracker.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/id_tracker.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/id_tracker.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/io.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/io.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/io.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/io.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/istream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/istream.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/istream.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/istream.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/json.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/json.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/json.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/json.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/leds.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/leds.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/leds.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/leds.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/line_simplification.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/line_simplification.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/line_simplification.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/line_simplification.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/noise_woryley.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/noise_woryley.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/noise_woryley.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/noise_woryley.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/ostream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/ostream.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/ostream.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/ostream.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/ptr.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/ptr.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/ptr.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/ptr.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/random.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/random.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/random.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/random.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/raster_sparse.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/raster_sparse.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/raster_sparse.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/raster_sparse.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/rectangular_draw_buffer.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/rectangular_draw_buffer.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/rectangular_draw_buffer.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/rectangular_draw_buffer.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/referent.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/referent.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/referent.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/referent.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/rgbw.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/rgbw.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/rgbw.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/rgbw.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/screenmap.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/screenmap.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/screenmap.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/screenmap.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/sin32.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/sin32.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/sin32.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/sin32.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/splat.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/splat.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/splat.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/splat.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/str.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/str.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/str.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/str.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/str_ui.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/str_ui.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/str_ui.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/str_ui.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/strstream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/strstream.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/strstream.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/strstream.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/stub_main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/stub_main.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/stub_main.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/stub_main.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/task.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/task.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/task.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/task.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/tile2x2.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/tile2x2.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/tile2x2.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/tile2x2.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/time.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/time.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/time.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/time.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/time_alpha.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/time_alpha.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/time_alpha.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/time_alpha.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/transform.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/transform.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/transform.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/transform.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/type_traits.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/type_traits.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/type_traits.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/type_traits.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/ui.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/ui.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/ui.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/ui.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/upscale.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/upscale.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/upscale.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/upscale.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/wave_simulation.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/wave_simulation.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/wave_simulation.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/wave_simulation.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/wave_simulation_real.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/wave_simulation_real.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/wave_simulation_real.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/wave_simulation_real.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/xmap.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/xmap.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/xmap.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/xmap.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/xymap.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/xymap.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/xymap.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/xymap.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/xypath.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/xypath.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/xypath.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/xypath.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/xypath_impls.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/xypath_impls.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/xypath_impls.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/xypath_impls.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fl/xypath_renderer.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fl/xypath_renderer.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fl/xypath_renderer.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fl/xypath_renderer.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/2d/blend.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/2d/blend.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/2d/blend.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/2d/blend.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/2d/luminova.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/2d/luminova.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/2d/luminova.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/2d/luminova.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/2d/noisepalette.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/2d/noisepalette.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/2d/noisepalette.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/2d/noisepalette.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/2d/scale_up.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/2d/scale_up.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/2d/scale_up.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/2d/scale_up.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/2d/wave.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/2d/wave.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/2d/wave.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/2d/wave.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/detail/fx_layer.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/detail/fx_layer.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/detail/fx_layer.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/detail/fx_layer.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/frame.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/frame.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/frame.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/frame.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/fx_engine.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/fx_engine.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/fx_engine.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/fx_engine.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/time.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/time.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/time.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/time.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/video.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/video.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/video.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/video.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/video/frame_interpolator.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/video/frame_interpolator.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/video/frame_interpolator.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/video/frame_interpolator.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/video/frame_tracker.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/video/frame_tracker.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/video/frame_tracker.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/video/frame_tracker.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/video/pixel_stream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/video/pixel_stream.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/video/pixel_stream.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/video/pixel_stream.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/fx/video/video_impl.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/fx/video/video_impl.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/fx/video/video_impl.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/fx/video/video_impl.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/hsv2rgb.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/hsv2rgb.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/hsv2rgb.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/hsv2rgb.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/lib8tion.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/lib8tion.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/lib8tion.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/lib8tion.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/noise.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/noise.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/noise.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/noise.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/adafruit/clockless.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/adafruit/clockless.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/adafruit/clockless.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/adafruit/clockless.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/arm/k20/clockless_objectfled.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/arm/k20/clockless_objectfled.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/arm/k20/clockless_objectfled.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/arm/k20/clockless_objectfled.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/arm/mgm240/fastpin_arm_mgm240.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/arm/mgm240/fastpin_arm_mgm240.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/arm/mgm240/fastpin_arm_mgm240.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/arm/mgm240/fastpin_arm_mgm240.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/compile_test.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/compile_test.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/compile_test.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/compile_test.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/audio/audio.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/audio/audio.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/audio/audio.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/audio/audio.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/audio/sound_util.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/audio/sound_util.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/audio/sound_util.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/audio/sound_util.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/clockless_i2s_esp32s3.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/clockless_i2s_esp32s3.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/clockless_i2s_esp32s3.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/clockless_i2s_esp32s3.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/i2s/i2s_esp32dev.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/i2s/i2s_esp32dev.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/i2s/i2s_esp32dev.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/i2s/i2s_esp32dev.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_4/idf4_rmt.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_4/idf4_rmt.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_4/idf4_rmt.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_4/idf4_rmt.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_4/idf4_rmt_impl.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_4/idf4_rmt_impl.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_4/idf4_rmt_impl.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_4/idf4_rmt_impl.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_5/idf5_rmt.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_5/idf5_rmt.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_5/idf5_rmt.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_5/idf5_rmt.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_5/strip_rmt.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_5/strip_rmt.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/rmt_5/strip_rmt.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/rmt_5/strip_rmt.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/esp/32/spi_ws2812/strip_spi.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/esp/32/spi_ws2812/strip_spi.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/esp/32/spi_ws2812/strip_spi.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/esp/32/spi_ws2812/strip_spi.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/stub/Arduino.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/stub/Arduino.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/stub/Arduino.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/stub/Arduino.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/stub/led_sysdefs_stub.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/stub/led_sysdefs_stub.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/stub/led_sysdefs_stub.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/stub/led_sysdefs_stub.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/stub/time_stub.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/stub/time_stub.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/stub/time_stub.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/stub/time_stub.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/active_strip_data.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/active_strip_data.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/active_strip_data.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/active_strip_data.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/engine_listener.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/engine_listener.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/engine_listener.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/engine_listener.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/entry_point.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/entry_point.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/entry_point.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/entry_point.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/fastspi_wasm.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/fastspi_wasm.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/fastspi_wasm.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/fastspi_wasm.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/fs_wasm.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/fs_wasm.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/fs_wasm.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/fs_wasm.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/js.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/js.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/js.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/js.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/js_bindings.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/js_bindings.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/js_bindings.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/js_bindings.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/js_fetch.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/js_fetch.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/js_fetch.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/js_fetch.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/timer.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/timer.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/timer.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/timer.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/platforms/wasm/ui.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/platforms/wasm/ui.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/platforms/wasm/ui.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/platforms/wasm/ui.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/power_mgt.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/power_mgt.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/power_mgt.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/power_mgt.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/sensors/button.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/sensors/button.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/sensors/button.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/sensors/button.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/sensors/digital_pin.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/sensors/digital_pin.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/sensors/digital_pin.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/sensors/digital_pin.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/sensors/pir.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/sensors/pir.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/sensors/pir.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/sensors/pir.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/simplex.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/simplex.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/simplex.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/simplex.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/third_party/cq_kernel/cq_kernel.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/cq_kernel/cq_kernel.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/cq_kernel/cq_kernel.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/cq_kernel/cq_kernel.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/third_party/cq_kernel/kiss_fft.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/cq_kernel/kiss_fft.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/cq_kernel/kiss_fft.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/cq_kernel/kiss_fft.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/third_party/cq_kernel/kiss_fftr.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/cq_kernel/kiss_fftr.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/cq_kernel/kiss_fftr.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/cq_kernel/kiss_fftr.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_api.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_api.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_api.c",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_api.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_rmt_dev.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_rmt_dev.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_rmt_dev.c",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_rmt_dev.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_rmt_encoder.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_rmt_encoder.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_rmt_encoder.c",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_rmt_encoder.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -o .pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_spi_dev.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_spi_dev.c",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/espressif/led_strip/src/led_strip_spi_dev.c",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/espressif/led_strip/src/led_strip_spi_dev.c.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/third_party/object_fled/src/OjectFLED.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/third_party/object_fled/src/OjectFLED.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/third_party/object_fled/src/OjectFLED.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/third_party/object_fled/src/OjectFLED.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/transpose8x1_noinline.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/transpose8x1_noinline.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/transpose8x1_noinline.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/transpose8x1_noinline.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/liba23/FastLED/wiring.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/FastLED/src/wiring.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": ".pio/libdeps/uno/FastLED/src/wiring.cpp",
+        "output": ".pio/build/uno/liba23/FastLED/wiring.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/buffer.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I.pio/libdeps/uno/IRremote/src -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard src/buffer.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "src/buffer.cpp",
+        "output": ".pio/build/uno/src/buffer.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/leds.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I.pio/libdeps/uno/IRremote/src -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard src/leds.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "src/leds.cpp",
+        "output": ".pio/build/uno/src/leds.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I.pio/libdeps/uno/IRremote/src -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard src/main.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "src/main.cpp",
+        "output": ".pio/build/uno/src/main.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/modes.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I.pio/libdeps/uno/IRremote/src -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard src/modes.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "src/modes.cpp",
+        "output": ".pio/build/uno/src/modes.cpp.o"
+    },
+    {
+        "command": "/Users/alex/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/remote.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DSERIAL_RX_BUFFER_SIZE=256 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I.pio/libdeps/uno/IRremote/src -I.pio/libdeps/uno/FastLED/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/Users/alex/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/Users/alex/.platformio/packages/framework-arduino-avr/cores/arduino -I/Users/alex/.platformio/packages/framework-arduino-avr/variants/standard src/remote.cpp",
+        "directory": "/Users/alex/Downloads/ambilight/arduino-ambilight",
+        "file": "src/remote.cpp",
+        "output": ".pio/build/uno/src/remote.cpp.o"
+    }
+]
