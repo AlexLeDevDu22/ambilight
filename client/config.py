@@ -12,6 +12,8 @@ DEFAULTS = {
     "num_leds": 113,
     "fps": 50,
     "screen_index": 0,
+    "mouse_enabled": True,
+    "mouse_sample_radius": 180,
     "border_depth_px": 300,
     "start_corner": "bottom-left",
     "direction": "counter-clockwise",

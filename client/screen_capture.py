@@ -174,6 +174,48 @@ class ScreenCapture:
         frame = frame[:, :, [2, 1, 0]]
         return frame
 
+    def get_mouse_position(self) -> tuple[float | None, float | None]:
+        """Retourne la position locale de la souris, ou (None, None) si absente.
+
+        Sans index explicite, utilise ``screen_index`` dans ``config.json``.
+        Les coordonnées sont relatives au coin supérieur gauche de l'écran choisi.
+        """
+        if self.screen_index is None:
+            from config import load
+
+            self.screen_index = load().get("screen_index", 0)
+
+        if (
+            not isinstance(self.screen_index, int)
+            or isinstance(self.screen_index, bool)
+            or self.screen_index < 0
+            or platform.system() != "Darwin"
+        ):
+            return None, None
+
+        try:
+            import Quartz.CoreGraphics as CG
+
+            error, display_ids, count = CG.CGGetActiveDisplayList(16, None, None)
+            if error != 0 or self.screen_index >= count:
+                return None, None
+
+            event = CG.CGEventCreate(None)
+            if event is None:
+                return None, None
+
+            position = CG.CGEventGetLocation(event)
+            bounds = CG.CGDisplayBounds(display_ids[self.screen_index])
+            x = position.x - bounds.origin.x
+            y = position.y - bounds.origin.y
+
+            if not (0 <= x < bounds.size.width and 0 <= y < bounds.size.height):
+                return None, None
+
+            return x, y
+        except Exception:
+            return None, None
+
     def resolution(self) -> tuple[int, int]:
         """Retourne (W, H) de l'écran après downscale."""
         if self._backend == "quartz":

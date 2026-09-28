@@ -22,6 +22,7 @@ from screen_capture import ScreenCapture
 from led_mapper import LedMapper
 from sound_ambient import SoundAmbient
 from ui import AmbilightUI
+from mouse import MouseAmbient, get_mouse_position
 
 DOWNSCALE = 4
 
@@ -83,6 +84,7 @@ class AmbilightApp:
         self._strip: LedStrip | None = None
         self._capture: ScreenCapture | None = None
         self._sound: SoundAmbient | None = None
+        self._mouse_ambient: MouseAmbient | None = None
 
         self._ui = AmbilightUI(
             cfg=self._cfg,
@@ -112,10 +114,15 @@ class AmbilightApp:
             screen_idx = cfg.get("screen_index", 0)
             self._capture = ScreenCapture(screen_index=screen_idx, downscale=DOWNSCALE)
             cfg["_downscale"] = DOWNSCALE
+            if cfg.get("mouse_enabled", True):
+                self._mouse_ambient = MouseAmbient()
+                self._mouse_ambient.start()
         elif mode == "sound":
             device = cfg.get("sound_device", None)
             self._sound = SoundAmbient(cfg)
             self._sound.start(device_index=device)
+        elif mode == "responsive":
+            pass #TODO
 
         self._stop_event.clear()
         self._thread = threading.Thread(target=self._loop, args=(cfg,), daemon=True)
@@ -180,6 +187,7 @@ class AmbilightApp:
         """Boucle ambilight classique avec transitions."""
         mapper = None
         prev_colors: list[tuple[int, int, int]] = []
+        last_mouse_status_update = 0.0
 
         try:
             while not self._stop_event.is_set():
@@ -193,6 +201,20 @@ class AmbilightApp:
 
                 # 1. Capture
                 frame = self._capture.capture()
+                mouse_pos = get_mouse_position(self._capture.screen_index)
+                if self._mouse_ambient:
+                    self._mouse_ambient.update_frame(
+                        frame,
+                        mouse_pos,
+                        int(self._cfg.get("mouse_sample_radius", 180)),
+                        DOWNSCALE,
+                    )
+                    mouse_status = self._mouse_ambient.status
+                else:
+                    mouse_status = "eclairage souris desactive"
+                if t0 - last_mouse_status_update >= 0.2:
+                    self._ui.update_mouse_status(mouse_pos, mouse_status)
+                    last_mouse_status_update = t0
 
                 # 2. Mapping
                 mapper.update_config(self._cfg)
@@ -210,7 +232,8 @@ class AmbilightApp:
                 prev_colors = blended
 
                 # 4. Envoi Arduino
-                self._strip.send(blended)
+                if self._strip:
+                    self._strip.send(blended)
 
                 # 5. FPS réel
                 t1 = time.perf_counter()
@@ -304,6 +327,9 @@ class AmbilightApp:
         if self._sound:
             self._sound.stop()
             self._sound = None
+        if self._mouse_ambient:
+            self._mouse_ambient.stop()
+            self._mouse_ambient = None
 
     # ------------------------------------------------------------------
     # Lancement

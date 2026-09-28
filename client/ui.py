@@ -4,6 +4,7 @@ ui.py – Interface Tkinter pour le système Ambilight.
 Modes :
   • Screen Ambient : capture d'écran classique
   • Sound Ambient  : visualiseur audio
+  • Responsive     : react au touche
 
 Contrôles communs :
   • Bouton ON / OFF, FPS, Brightness, Gamma, Saturation
@@ -18,7 +19,7 @@ Contrôles Sound Ambient :
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-import threading
+import glob
 from typing import Callable, Optional
 
 try:
@@ -120,6 +121,9 @@ class AmbilightUI:
 
         # ── Section Sound ─────────────────────────────────────────────
         self._build_sound_section(right_col)
+
+        # ── Section Mouse Ambient ────────────────────────────────────
+        self._build_mouse_section(right_col)
 
         # ── Bouton Sauvegarder ────────────────────────────────────────
         tk.Frame(root, bg=BORDER, height=1).pack(fill="x", padx=16)
@@ -225,26 +229,37 @@ class AmbilightUI:
         btn_frame.pack(fill="x", pady=4)
 
         self._btn_screen = tk.Radiobutton(
-            btn_frame, text="🖥  Screen Ambient",
+            btn_frame, text="🖥",
             variable=self._var_mode, value="screen",
             bg=PANEL, fg=FG, selectcolor=PANEL2,
             activebackground=PANEL, activeforeground=FG,
-            font=("Helvetica", 10, "bold"),
+            font=("Helvetica", 20, "bold"),
             cursor="hand2",
             command=self._on_mode_change,
         )
         self._btn_screen.pack(side="left", expand=True, padx=4)
 
         self._btn_sound = tk.Radiobutton(
-            btn_frame, text="🎵  Sound Ambient",
+            btn_frame, text="🎵",
             variable=self._var_mode, value="sound",
             bg=PANEL, fg=FG, selectcolor=PANEL2,
             activebackground=PANEL, activeforeground=FG,
-            font=("Helvetica", 10, "bold"),
+            font=("Helvetica", 20, "bold"),
             cursor="hand2",
             command=self._on_mode_change,
         )
         self._btn_sound.pack(side="left", expand=True, padx=4)
+
+        self._btn_responsive = tk.Radiobutton(
+            btn_frame, text="💥",
+            variable=self._var_mode, value="responsive",
+            bg=PANEL, fg=FG, selectcolor=PANEL2,
+            activebackground=PANEL, activeforeground=FG,
+            font=("Helvetica", 20, "bold"),
+            cursor="hand2",
+            command=self._on_mode_change,
+        )
+        self._btn_responsive.pack(side="left", expand=True, padx=4)
 
         # Choix du numéro d'écran
         self.l_screen = self._label(mode_f, "Numéro d'écran")
@@ -495,6 +510,59 @@ class AmbilightUI:
         # Charger les périphériques
         self._refresh_audio_devices()
 
+    def _build_mouse_section(self, parent):
+        mouse = self._section(parent, "Mouse Ambient", color=GREEN)
+        mouse.pack(fill="x", pady=4)
+
+        self._var_mouse_enabled = tk.BooleanVar(
+            value=self._cfg.get("mouse_enabled", True)
+        )
+        tk.Checkbutton(
+            mouse,
+            text="Activer les LEDs de la souris",
+            variable=self._var_mouse_enabled,
+            bg=PANEL,
+            fg=FG,
+            selectcolor=PANEL2,
+            activebackground=PANEL,
+            activeforeground=FG,
+        ).pack(anchor="w")
+
+        self._var_mouse_radius = tk.IntVar(
+            value=self._cfg.get("mouse_sample_radius", 180)
+        )
+        self._lbl_mouse_radius = self._label(
+            mouse, f"Rayon d'echantillonnage : {self._var_mouse_radius.get()} px", fg=FG
+        )
+        self._lbl_mouse_radius.pack(anchor="w", pady=(4, 0))
+        tk.Scale(
+            mouse,
+            from_=40,
+            to=500,
+            resolution=10,
+            orient="horizontal",
+            variable=self._var_mouse_radius,
+            showvalue=False,
+            bg=PANEL,
+            fg=LABEL_FG,
+            troughcolor="#0f0f30",
+            activebackground=GREEN,
+            highlightthickness=0,
+            command=lambda value: self._lbl_mouse_radius.config(
+                text=f"Rayon d'echantillonnage : {int(float(value))} px"
+            ),
+        ).pack(fill="x")
+
+        self._lbl_mouse_cursor = self._label(mouse, "Curseur : en attente", fg=FG)
+        self._lbl_mouse_cursor.pack(anchor="w", pady=(4, 0))
+        self._lbl_mouse_rgb = self._label(
+            mouse,
+            "OpenRGB : en attente",
+            wraplength=300,
+            justify="left",
+        )
+        self._lbl_mouse_rgb.pack(anchor="w")
+
     # ------------------------------------------------------------------
     # Logique mode
     # ------------------------------------------------------------------
@@ -562,6 +630,8 @@ class AmbilightUI:
         cfg = dict(self._cfg)
         cfg["serial_port"]    = self._var_port.get().strip()
         cfg["screen_index"]   = self._var_screen.get()
+        cfg["mouse_enabled"]  = self._var_mouse_enabled.get()
+        cfg["mouse_sample_radius"] = self._var_mouse_radius.get()
         cfg["num_leds"]       = self._var_num_leds.get()
         cfg["fps"]            = self._vars["fps"].get()
         cfg["brightness"]     = round(self._vars["brightness_pct"].get() / 100.0, 2)
@@ -620,6 +690,23 @@ class AmbilightUI:
     def update_fps(self, fps_real: float):
         self.root.after(0, lambda: self._lbl_fps.config(
             text=f"FPS : {fps_real:.1f}"))
+
+    def update_mouse_status(
+        self,
+        position: tuple[float | None, float | None],
+        openrgb_status: str,
+    ):
+        x, y = position
+        if x is None or y is None:
+            cursor_text = "Curseur : absent de l'ecran selectionne"
+        else:
+            cursor_text = f"Curseur detecte : ({x:.0f}, {y:.0f})"
+
+        def _do():
+            self._lbl_mouse_cursor.config(text=cursor_text)
+            self._lbl_mouse_rgb.config(text=f"OpenRGB : {openrgb_status}")
+
+        self.root.after(0, _do)
 
     def update_track(self, track: Optional[str], cover_url: Optional[str] = None):
         """Mets à jour le texte et la cover Spotify."""

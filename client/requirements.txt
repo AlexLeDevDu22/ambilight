@@ -1,0 +1,6 @@
+openrgb-python>=0.3.7,<0.4
+pyserial
+numpy
+sounddevice
+pillow
+pyobjc-framework-Quartz
