@@ -52,6 +52,10 @@ class AudioAnalyzer:
         self._silent_since: float | None = time.monotonic()
         self.router = OutputRouter()
         self.route_msg = ""
+        # Son envoyé par une app (iPhone…) : prioritaire sur BlackHole
+        self._analysis_lock = threading.Lock()
+        self._external_until = 0.0
+        self.external_name = ""
         self._reset_state(48000)
 
     # ------------------------------------------------------------------
@@ -173,15 +177,42 @@ class AudioAnalyzer:
         return value / p
 
     def _callback(self, indata, frames, time_info, status):
+        if self.external_active:
+            return  # une app envoie déjà le son de sa musique
         try:
             mono = indata.mean(axis=1) if indata.ndim == 2 else indata
-            n = len(mono)
-            self._buf = np.roll(self._buf, -n)
-            self._buf[-n:] = mono
-            self._clock += n / self.sr  # horloge audio (indépendante du scheduling)
-            self._analyze(float(np.sqrt(np.mean(mono * mono))))
+            self._ingest(mono, self.sr)
         except Exception:
             pass
+
+    def _ingest(self, mono: np.ndarray, sr: int):
+        with self._analysis_lock:
+            if sr != self.sr:
+                self._reset_state(sr)
+            for i in range(0, len(mono), BLOCK):
+                chunk = mono[i:i + BLOCK]
+                n = len(chunk)
+                self._buf = np.roll(self._buf, -n)
+                self._buf[-n:] = chunk
+                self._clock += n / self.sr  # horloge audio (indépendante du scheduling)
+                self._analyze(float(np.sqrt(np.mean(chunk * chunk))))
+
+    # ---- Son envoyé par une app (WebSocket /api/audio) -------------------
+    @property
+    def external_active(self) -> bool:
+        return time.monotonic() < self._external_until
+
+    def feed_external(self, pcm: bytes, sr: int, name: str = "app"):
+        """PCM 16 bits signé little-endian, mono."""
+        samples = np.frombuffer(pcm[: len(pcm) // 2 * 2], dtype="<i2").astype(np.float32) / 32768.0
+        if samples.size == 0:
+            return
+        self._external_until = time.monotonic() + 0.6
+        self.external_name = name
+        try:
+            self._ingest(samples, int(sr))
+        except Exception as e:
+            print(f"[audio] flux externe : {e}")
 
     def _analyze(self, rms: float):
         now = self._clock
@@ -263,7 +294,7 @@ class AudioAnalyzer:
 
     def hint(self, music_playing: bool) -> str:
         """Message pour l'utilisateur si la musique joue mais rien n'arrive."""
-        if not self.active:
+        if not self.active or self.external_active:
             return ""
         if self._stream is None:
             return self.status

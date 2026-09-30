@@ -265,6 +265,7 @@ function refresh() {
     }
   });
   updateSidesTotal();
+  renderDevices();
 }
 
 function updateSidesTotal(total) {
@@ -273,6 +274,31 @@ function updateSidesTotal(total) {
   const el = $("#sidesTotal");
   el.textContent = `${t} / ${MAX_LEDS}`;
   el.classList.toggle("bad", t < 1 || t > MAX_LEDS);
+}
+
+/* Appareils appairés (app iPhone…) */
+let netInfo = null;
+function renderDevices() {
+  const list = $("#devicesList");
+  if (!list || !cfg) return;
+  const devices = Object.entries(cfg.general.devices || {});
+  const key = JSON.stringify(devices.map(([t, d]) => [t.slice(0, 6), d.name, d.last_seen]));
+  if (!_changed(list, "devices", key)) return;
+  list.innerHTML = "";
+  if (!devices.length) {
+    list.innerHTML = '<li class="empty">Aucun appareil — ouvre la page Ambilight dans l\'app pour l\'appairer</li>';
+  }
+  for (const [token, d] of devices) {
+    const li = document.createElement("li");
+    const seen = d.last_seen ? new Date(d.last_seen * 1000).toLocaleString("fr-FR", { dateStyle: "short", timeStyle: "short" }) : "";
+    li.innerHTML = `<span>📱 ${d.name.replace(/[<>&]/g, "")}</span><small>vu ${seen}</small><button>Retirer</button>`;
+    li.querySelector("button").addEventListener("click", async () => {
+      await fetch("/api/devices/revoke", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token }) });
+      loadState();
+    });
+    list.appendChild(li);
+  }
+  if (netInfo) setText($("#netAddr"), netInfo.addresses.map(a => `${a}:${netInfo.port}`).join(" · "));
 }
 
 function fillSelects(ports, screens) {
@@ -608,6 +634,15 @@ function applyLive(l) {
 
   if (l.cfg !== undefined) syncConfig(l.cfg);
 
+  // Appairage en cours : afficher le code à taper dans l'app
+  const pair = (l.pairing || [])[0];
+  setHidden($("#pairOverlay"), !pair);
+  if (pair) {
+    setText($("#pairDevice"), pair.device);
+    setText($("#pairCode"), pair.code);
+    setText($("#pairTtl"), String(pair.expires_in));
+  }
+
   // Télécommande : petite notification
   if (l.remote && l.remote.id !== lastRemoteId) {
     if (lastRemoteId !== null && l.remote.text) showToast(l.remote.text);
@@ -710,6 +745,7 @@ async function loadState() {
     buildPalettes();
     buildQuick();
   }
+  netInfo = s.network || null;
   fillSelects(s.ports, s.screens);
   buildLeds();
   refresh();

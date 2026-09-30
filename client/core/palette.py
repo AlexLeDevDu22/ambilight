@@ -175,6 +175,7 @@ class SpotifyWatcher:
         self.artist: str | None = None
         self.cover_url: str | None = None
         self.colors: list[str] | None = None
+        self._ext: dict | None = None
         self.version = 0
         self._stop = threading.Event()
         self._thread = threading.Thread(target=self._run, name="spotify", daemon=True)
@@ -186,14 +187,76 @@ class SpotifyWatcher:
     def stop(self):
         self._stop.set()
 
+    # ---- Morceau envoyé par une app (POST /api/nowplaying) ---------------
+    # Prioritaire sur Spotify tant qu'il joue (l'app renvoie l'info au moins
+    # toutes les 30 s pendant la lecture).
+    EXTERNAL_TTL = 45
+
+    def set_external(self, meta: dict, artwork: bytes | None):
+        with self._lock:
+            prev = self._ext or {}
+            ext = {
+                "title": str(meta.get("title") or "")[:200],
+                "artist": str(meta.get("artist") or "")[:200],
+                "album": str(meta.get("album") or "")[:200],
+                "playing": bool(meta.get("playing", True)),
+                "source": str(meta.get("source") or "app")[:40],
+                "updated": time.monotonic(),
+                "art": prev.get("art"),
+                "art_version": prev.get("art_version", 0),
+                "colors": prev.get("colors"),
+            }
+            same_track = prev.get("title") == ext["title"] and prev.get("artist") == ext["artist"]
+            if artwork:
+                if artwork != prev.get("art"):
+                    ext["art"] = artwork
+                    ext["art_version"] = prev.get("art_version", 0) + 1
+                    try:
+                        ext["colors"] = palette_from_image(Image.open(io.BytesIO(artwork))) if PIL_OK else None
+                    except Exception as e:
+                        print(f"[nowplaying] pochette illisible : {e}")
+                        ext["colors"] = None
+            elif not same_track:
+                ext["art"], ext["colors"] = None, None
+            self._ext = ext
+            self.version += 1
+
+    def external_artwork(self) -> bytes | None:
+        with self._lock:
+            return self._ext.get("art") if self._ext else None
+
+    def _external_active(self) -> bool:
+        e = self._ext
+        return bool(e and e["playing"] and time.monotonic() - e["updated"] < self.EXTERNAL_TTL)
+
+    def active_colors(self) -> list[str] | None:
+        """Couleurs de la pochette en cours (app en priorité, sinon Spotify)."""
+        with self._lock:
+            if self._external_active():
+                return self._ext["colors"]
+            return self.colors
+
     def snapshot(self) -> dict:
         with self._lock:
+            if self._external_active():
+                e = self._ext
+                return {
+                    "playing": True,
+                    "track": e["title"],
+                    "artist": e["artist"],
+                    "album": e["album"],
+                    "cover": f"/api/nowplaying/artwork?v={e['art_version']}" if e["art"] else None,
+                    "colors": e["colors"],
+                    "source": e["source"],
+                }
             return {
                 "playing": self.track is not None,
                 "track": self.track,
                 "artist": self.artist,
+                "album": None,
                 "cover": self.cover_url,
                 "colors": self.colors,
+                "source": "spotify",
             }
 
     def _query(self):
@@ -285,7 +348,7 @@ class PaletteProvider:
         return self._cache[key]
 
     def _cover(self) -> Palette:
-        colors = self.spotify.colors
+        colors = self.spotify.active_colors()
         target = Palette(colors, "cover") if colors else self._preset(FALLBACK_PRESET)
         now = time.monotonic()
         with self._lock:

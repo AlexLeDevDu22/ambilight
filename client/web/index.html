@@ -229,6 +229,15 @@
         <span class="switch"></span>
         <span class="toggle-text"><b>Veille intelligente</b><small>Écran verrouillé, éteint ou Mac en veille → tout s'éteint, puis se rallume au retour</small></span>
       </label>
+      <div class="field devices-field">
+        <span>Appareils connectés <em id="netAddr"></em></span>
+        <label class="toggle">
+          <input type="checkbox" data-path="general.lan">
+          <span class="switch"></span>
+          <span class="toggle-text"><b>Accès depuis le réseau local</b><small>Pour l'app iPhone (appairage par code affiché ici)</small></span>
+        </label>
+        <ul class="devices" id="devicesList"></ul>
+      </div>
       <div class="field remote-help">
           <span>Télécommande <em>(serveur arrêté : modes intégrés de l'Arduino)</em></span>
           <dl>
@@ -269,6 +278,16 @@
     </details>
 
     <div class="toast" id="toast" hidden></div>
+
+  <!-- Appairage d'un appareil (app iPhone) -->
+  <div class="pair-overlay" id="pairOverlay" hidden>
+    <div class="pair-card">
+      <div class="pair-icon">📱</div>
+      <div class="pair-title"><b id="pairDevice"></b> veut se connecter</div>
+      <div class="pair-code" id="pairCode"></div>
+      <div class="pair-hint">Tape ce code dans l'app · expire dans <span id="pairTtl"></span> s</div>
+    </div>
+  </div>
 
     <script src="/app.js"></script>
   </body>

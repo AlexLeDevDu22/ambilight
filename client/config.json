@@ -1,7 +1,7 @@
 {
   "leds": {
-    "mode": "ambient",
-    "sound_effect": "ripples",
+    "mode": "screen",
+    "sound_effect": "pulse",
     "ambient_effect": "flow",
     "palette": "cover",
     "brightness": 1.0,
@@ -44,7 +44,9 @@
     }
   },
   "general": {
-    "smart_sleep": true
+    "smart_sleep": true,
+    "lan": true,
+    "devices": {}
   },
   "run": {
     "leds": true,

@@ -60,6 +60,9 @@ DEFAULTS = {
     "general": {
         # Écran verrouillé / éteint / Mac en veille → tout s'éteint, puis se rallume
         "smart_sleep": True,
+        # Accès depuis le réseau local (app iPhone) : appairage par code
+        "lan": True,
+        "devices": {},  # jeton → {name, paired, last_seen}
     },
     # Ce qui tournait à la fermeture : relancé automatiquement au démarrage.
     "run": {"leds": False, "mouse": False},
@@ -145,6 +148,13 @@ def validate(cfg: dict) -> dict:
 
     src_g = cfg.get("general") or {}
     out["general"]["smart_sleep"] = bool(src_g.get("smart_sleep", d["general"]["smart_sleep"]))
+    out["general"]["lan"] = bool(src_g.get("lan", d["general"]["lan"]))
+    devices = src_g.get("devices") if isinstance(src_g.get("devices"), dict) else {}
+    out["general"]["devices"] = {
+        str(t): {"name": str(v.get("name", "Appareil"))[:40], "paired": int(v.get("paired", 0) or 0),
+                 "last_seen": int(v.get("last_seen", 0) or 0)}
+        for t, v in devices.items() if isinstance(v, dict) and len(str(t)) >= 16
+    }
     out["run"] = {"leds": bool(src_r.get("leds", False)), "mouse": bool(src_r.get("mouse", False))}
     return out
 

@@ -92,6 +92,16 @@ L'interface affiche une petite bulle à chaque touche et se met à jour toute se
 
 Les réglages sont enregistrés à chaque changement dans `config.json`, ainsi que ce qui était allumé (relancé au démarrage).
 
+## Accès depuis l'app iPhone (réseau local)
+
+Le serveur écoute aussi sur le Wi-Fi (désactivable : Réglages avancés › *Accès depuis le réseau local*) et s'annonce en
+Bonjour (`_ambilight._tcp`, port 8787). Un appareil s'appaire une fois avec un **code à 4 chiffres** affiché sur le Mac,
+puis utilise un jeton (`Authorization: Bearer …`). Les appareils appairés se retirent dans les réglages avancés.
+L'interface web reste réservée au Mac.
+
+- API complète, flux temps réel (SSE `/api/events?lite=1`), envoi du son de l'app (WebSocket `/api/audio`, PCM 16 bits mono)
+  et du morceau en cours (`/api/nowplaying`, prioritaire sur Spotify) : voir [docs/app-integration-prompt.md](docs/app-integration-prompt.md).
+
 ## Permissions macOS (pour « Ambilight », Réglages › Confidentialité et sécurité)
 
 - **Surveillance de l'entrée** → LEDs de la souris et option Réactif
@@ -104,7 +114,7 @@ retirer Ambilight de la liste avec « − », le rajouter depuis `~/Applications
 ## Architecture
 
 ```
-server.py               HTTP + API JSON + flux temps réel (SSE)
+server.py               HTTP + API JSON + flux temps réel (SSE) + WebSocket audio, accès réseau, Bonjour
 core/serial_link.py     liaison Arduino persistante à 500 kbauds (repli 115200), 1 trame à la fois, attend le "OK",
                         ping chaque seconde, lit les touches de télécommande ("IR:<TOUCHE>")
 core/mouse_device.py    HID direct Revenger ST (plus besoin d'OpenRGB)
@@ -121,6 +131,7 @@ core/menubar.py         icône et menu dans la barre de menus
 core/autostart.py       LaunchAgent (lancement à l'ouverture de session)
 core/updater.py         mises à jour automatiques (code, web, dépendances, firmware)
 core/permissions.py     demande des autorisations macOS
+core/auth.py            appairage des appareils du réseau (code à 4 chiffres → jeton)
 macos/                  lanceur natif (Python embarqué), Info.plist, build_app.sh
 web/                    interface
 ```
