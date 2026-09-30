@@ -4,7 +4,6 @@
 #include <modes.h>
 #include <buffer.h>
 
-#define BAUD_RATE       115200   // 12× plus rapide = 12× moins de risque d'overflow
 
 enum SystemState {
     STATE_SERIAL,   // Reçoit du Serial

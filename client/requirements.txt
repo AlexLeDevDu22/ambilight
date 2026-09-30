@@ -1,6 +1,8 @@
-openrgb-python>=0.3.7,<0.4
-pyserial
 numpy
+pyserial
 sounddevice
 pillow
+hidapi
 pyobjc-framework-Quartz
+pyobjc-framework-ScreenCaptureKit
+pyobjc-framework-libdispatch

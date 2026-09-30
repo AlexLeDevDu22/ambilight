@@ -1,26 +1,49 @@
 {
-  "num_leds": 113,
-  "fps": 30,
-  "screen_index": 0,
-  "mouse_enabled": true,
-  "mouse_sample_radius": 180,
-  "border_depth_px": 300,
-  "start_corner": "bottom-left",
-  "direction": "counter-clockwise",
-  "led_sides": {
-    "bottom_left_count": 36,
-    "right_count": 21,
-    "top_count": 36,
-    "left_count": 20,
-    "bottom_right_count": 0
+  "leds": {
+    "mode": "screen",
+    "sound_effect": "pulse",
+    "ambient_effect": "flow",
+    "palette": "cover",
+    "brightness": 1.0,
+    "sensitivity": 0.75,
+    "speed": 1.0,
+    "smoothing": 0.5,
+    "colors": [
+      "#ff2820",
+      "#00d4ff"
+    ]
   },
-  "gamma": 2.0,
-  "brightness": 1,
-  "saturation_boost": 4,
-  "transition_speed": 0.5,
-  "mode": "screen",
-  "sound_device": null,
-  "sound_effect": "ripples",
-  "sound_hue_speed": 0.1,
-  "sound_smoothing": 0.3
+  "mouse": {
+    "mode": "sound",
+    "sound_effect": "spin",
+    "palette": "cover",
+    "brightness": 1.0,
+    "sensitivity": 2.5,
+    "speed": 0.5,
+    "responsive": true,
+    "colors": {
+      "ring": "#7b5cff",
+      "wheel": "#ff4d6d",
+      "logo": "#00d4ff"
+    }
+  },
+  "hardware": {
+    "serial_port": "auto",
+    "screen_index": 0,
+    "fps": 30,
+    "gamma": 2.0,
+    "saturation": 1.6,
+    "border_depth_px": 300,
+    "led_sides": {
+      "bottom_left_count": 36,
+      "right_count": 21,
+      "top_count": 37,
+      "left_count": 19,
+      "bottom_right_count": 0
+    }
+  },
+  "run": {
+    "leds": true,
+    "mouse": true
+  }
 }

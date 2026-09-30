@@ -1,5 +1,4 @@
 #!/bin/bash
-
-cd "/Users/alex/Projets_Persos/Personnal_projects/Ambilight/client"
-
-/Users/alex/Projets_Persos/Personnal_projects/Ambilight/client/.venv/bin/python main.py
+# Lance le serveur Ambilight et ouvre l'interface (http://127.0.0.1:8787).
+cd "$(dirname "$0")"
+exec ./.venv/bin/python -u server.py "$@"

@@ -7,7 +7,7 @@
 
 #define NUM_LEDS 113
 #define DATA_PIN 6
-#define BAUD_RATE 115200
+#define BAUD_RATE 500000   // 16 MHz → 500000 exact (0 % d'erreur), ~60 i/s pour 113 LEDs
 
 
 extern CRGB leds[NUM_LEDS];
