@@ -1,8 +1,6 @@
-
 #ifndef REMOTE_H
 #define REMOTE_H
 #include <Arduino.h>
-
 
 #define RECV_PIN 7
 
@@ -29,30 +27,23 @@
 #define REMOTE_9        0xB54AFF00
 #define REMOTE_ST       0xF20DFF00
 
-enum RemoteCode {
-    REMOTE_NONE = 0,
-    REMOTE_OFF,
-    REMOTE_ON,
-    REMOTE_BRIGHT_UP,
-    REMOTE_BRIGHT_DOWN,
-    REMOTE_NEXT_MODE,
-    REMOTE_PREV_COLOR,
-    REMOTE_NEXT_COLOR,
-    REMOTE_TOGGLE_ANIM,
-    REMOTE_SPEED_DOWN,
-    REMOTE_SPEED_UP,
-    REMOTE_MODE_1,
-    REMOTE_MODE_2,
-    REMOTE_MODE_3,
-    REMOTE_MODE_4,
-    REMOTE_MODE_5,
-    REMOTE_MODE_6,
-    REMOTE_MODE_7,
-    REMOTE_MODE_8,
-    REMOTE_MODE_9
+// Touches physiques de la télécommande
+enum RemoteButton {
+    BTN_NONE = 0,
+    BTN_POWER, BTN_VOL_UP, BTN_VOL_DOWN, BTN_FUNC, BTN_EQ, BTN_ST,
+    BTN_PREV, BTN_PLAY, BTN_NEXT, BTN_UP, BTN_DOWN,
+    BTN_0, BTN_1, BTN_2, BTN_3, BTN_4, BTN_5, BTN_6, BTN_7, BTN_8, BTN_9
+};
+
+struct RemoteEvent {
+    RemoteButton button;
+    bool repeat;          // touche maintenue (trame de répétition NEC)
+    unsigned long raw;    // code brut (utile pour une touche inconnue)
 };
 
 void remote_init();
-RemoteCode remote_read();
+RemoteEvent remote_read();
+const char *remote_name(RemoteButton b);   // nom envoyé au serveur ("POWER", "VOL_UP"…)
+void remote_wait_idle(uint16_t max_ms);    // attend la fin d'une trame IR en cours
 
 #endif

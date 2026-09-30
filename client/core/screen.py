@@ -93,6 +93,79 @@ def led_layout(led_sides: dict) -> np.ndarray:
     return np.array(pts, dtype=np.float32).reshape(-1, 2)
 
 
+class LetterboxDetector:
+    """Bandes noires de film (haut/bas) ou de vidéo 4:3 (gauche/droite).
+
+    On ne recadre que si on est sûr que c'est une vidéo :
+      • lignes/colonnes quasi parfaitement noires sur toute leur longueur
+        (une interface sombre a du texte → pas prise pour une bande) ;
+      • bandes symétriques et d'au moins 5 % de l'écran ;
+      • image plus large que l'écran (film) ou plus étroite (4:3) ;
+      • du contenu visible au milieu (une scène qui fond au noir ne compte pas) ;
+      • situation stable ~1,5 s avant d'appliquer (0,6 s pour relâcher).
+    """
+
+    BLACK = 14      # luminance max (0-255) d'une ligne de bande noire
+    APPLY_AFTER = 1.5
+    RELEASE_AFTER = 0.6
+
+    def __init__(self):
+        self.crop = (0, 0, 0, 0)          # haut, bas, gauche, droite (pixels)
+        self._cand = self.crop
+        self._cand_since = 0.0
+
+    @staticmethod
+    def _run_length(mask: np.ndarray) -> int:
+        """Nombre d'éléments True consécutifs au début."""
+        idx = np.flatnonzero(~mask)
+        return int(idx[0]) if idx.size else len(mask)
+
+    def _detect(self, frame: np.ndarray):
+        h, w = frame.shape[:2]
+        luma = frame[:, :, 0] * 0.3 + frame[:, :, 1] * 0.59 + frame[:, :, 2] * 0.11
+        rows = luma.max(axis=1) < self.BLACK
+        cols = luma.max(axis=0) < self.BLACK
+        top, bottom = self._run_length(rows), self._run_length(rows[::-1])
+        left, right = self._run_length(cols), self._run_length(cols[::-1])
+        if top + bottom >= h - 4 or left + right >= w - 4:
+            return None  # écran (presque) tout noir : on ne décide rien
+
+        screen_ar = w / h
+        # Letterbox (film plus large que l'écran)
+        if not (top >= 0.05 * h and bottom >= 0.05 * h and abs(top - bottom) <= 0.03 * h + 1
+                and w / (h - top - bottom) > screen_ar + 0.08):
+            top = bottom = 0
+        # Pillarbox (vidéo plus étroite que l'écran)
+        if not (left >= 0.05 * w and right >= 0.05 * w and abs(left - right) <= 0.03 * w + 1
+                and (w - left - right) / (h - top - bottom) < screen_ar - 0.1):
+            left = right = 0
+        center = luma[top:h - bottom, left:w - right]
+        if center.size == 0 or center.mean() < 10:
+            return None  # scène sombre : on garde l'état actuel
+        return (top, bottom, left, right)
+
+    def update(self, frame: np.ndarray, now: float) -> tuple[int, int, int, int]:
+        cand = self._detect(frame)
+        if cand is None:
+            return self.crop
+        close = all(abs(a - b) <= 2 for a, b in zip(cand, self._cand))
+        if not close:
+            self._cand, self._cand_since = cand, now
+        elif cand != self.crop:
+            grows = sum(cand) > sum(self.crop)
+            wait = self.APPLY_AFTER if grows else self.RELEASE_AFTER
+            if now - self._cand_since >= wait:
+                self.crop = self._cand
+        return self.crop
+
+    def aspect(self, frame_shape) -> str:
+        h, w = frame_shape[:2]
+        t, b, l, r = self.crop
+        if not any(self.crop):
+            return ""
+        return f"{(w - l - r) / max(1, h - t - b):.2f}:1"
+
+
 class ScreenMapper:
     """frame → couleurs LED (float 0-1), avec lissage spatial et temporel."""
 

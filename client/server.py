@@ -3,6 +3,10 @@ server.py – Serveur local Ambilight + interface web.
 
     python server.py            → http://127.0.0.1:8787 (ouvre le navigateur)
     python server.py --no-browser
+    python server.py --no-menubar   (sans icône dans la barre de menus)
+
+En temps normal il est lancé par Ambilight.app (voir update.sh) : icône dans
+la barre de menus, démarrage à l'ouverture de session, mises à jour à chaud.
 
 Architecture :
   • connexions matérielles persistantes (Arduino, souris) ouvertes au lancement
@@ -14,7 +18,9 @@ Architecture :
 import argparse
 import errno
 import json
+import os
 import signal
+import subprocess
 import sys
 import threading
 import time
@@ -28,9 +34,12 @@ from core.input_events import InputMonitor
 from core.mouse_device import RevengerST
 from core.mouse_engine import MouseEngine
 from core.palette import PRESETS, PaletteProvider, SpotifyWatcher
+from core.remote import RemoteControl
 from core.screen import screen_count
 from core.serial_link import SerialLink, list_ports
+from core.sleep import SmartSleep
 from core.strip_engine import StripEngine
+from core.updater import AutoUpdater
 
 HOST = "127.0.0.1"
 PORT = 8787
@@ -49,17 +58,28 @@ class App:
         self.spotify = SpotifyWatcher()
         self.palettes = PaletteProvider(self.spotify)
         self.audio = AudioAnalyzer()
-        self.link = SerialLink(lambda: self.store.get()["hardware"]["serial_port"])
+        self.remote = RemoteControl(self)
+        self.link = SerialLink(lambda: self.store.get()["hardware"]["serial_port"], self.remote.on_serial_line)
         self.mouse_dev = RevengerST()
         self.inputs = InputMonitor()
         self.strip = StripEngine(self.store, self.link, self.audio, self.palettes)
         self.mouse = MouseEngine(self.store, self.mouse_dev, self.audio, self.palettes, self.inputs)
+        self.mouse.strip = self.strip
+        self.sleep = SmartSleep(self)
         self._ctl_lock = threading.Lock()
+        self.updater: AutoUpdater | None = None
+        self.quit_event = threading.Event()
 
     def boot(self):
+        if os.environ.get("AMBILIGHT_APP"):
+            from core import permissions
+            missing = permissions.request_missing(self.store.get()["leds"]["mode"] == "screen")
+            if missing:
+                print(f"[permissions] à autoriser pour Ambilight : {', '.join(missing)}")
         self.spotify.start()
         self.link.start()           # connexion Arduino en tâche de fond, dès maintenant
         threading.Thread(target=self._watch_mouse, name="mouse-watch", daemon=True).start()
+        self.sleep.start()
         run = self.store.get()["run"]
         if run["leds"]:
             self.strip.start()
@@ -89,6 +109,8 @@ class App:
 
     def control(self, target: str, action: str) -> None:
         engine = {"leds": self.strip, "mouse": self.mouse}[target]
+        if self.sleep.sleeping:
+            self.sleep.cancel(target)
         with self._ctl_lock:
             if action == "toggle":
                 action = "stop" if engine.running else "start"
@@ -121,8 +143,22 @@ class App:
             },
             "spotify": spotify,
             "audio_hint": self.audio.hint(spotify["playing"]),
+            "levels": self._levels(),
             "serial": {"status": self.link.status, "connected": self.link.connected},
+            "remote": self.remote.last,
+            "sleep": {"on": self.sleep.sleeping, "reason": self.sleep.reason},
+            "cfg": self.store.version,  # change → l'interface recharge les réglages
+            "web": self.updater.web_version if self.updater else "",
+            "update": self.updater.status if self.updater else "",
         }
+
+    def _levels(self) -> list[float]:
+        """7 barres d'égaliseur (réelles) si l'audio est actif, sinon []."""
+        if not self.audio.active:
+            return []
+        spec = self.audio.snapshot()["spectrum"]
+        bars = [spec[i * len(spec) // 7:(i + 1) * len(spec) // 7].max() for i in range(7)]
+        return [round(float(b), 2) for b in bars]
 
     def state(self) -> dict:
         return {
@@ -188,6 +224,9 @@ def make_handler(app: App):
                     patch.pop("run", None)
                     cfg = app.store.update(patch)
                     return self._json({"config": cfg})
+                if path == "/api/quit":
+                    app.quit_event.set()
+                    return self._json({"ok": True})
                 if len(parts) == 3 and parts[0] == "api" and parts[1] in ("leds", "mouse") \
                         and parts[2] in ("start", "stop", "toggle", "restart"):
                     app.control(parts[1], parts[2])
@@ -224,12 +263,12 @@ def main():
     parser = argparse.ArgumentParser(description="Ambilight – serveur local")
     parser.add_argument("--port", type=int, default=PORT)
     parser.add_argument("--no-browser", action="store_true")
+    parser.add_argument("--no-menubar", action="store_true")
     args = parser.parse_args()
     url = f"http://{HOST}:{args.port}"
 
-    app = App()
     try:
-        httpd = Server((HOST, args.port), make_handler(app))
+        httpd = Server((HOST, args.port), None)
     except OSError as e:
         if e.errno == errno.EADDRINUSE:
             # Déjà lancé : on ouvre simplement l'interface existante.
@@ -239,27 +278,57 @@ def main():
             return
         raise
 
-    stopping = threading.Event()
+    app = App()
+    app.updater = AutoUpdater(app)
+    httpd.RequestHandlerClass = make_handler(app)
 
     def on_signal(*_):
-        if not stopping.is_set():
-            stopping.set()
-            threading.Thread(target=httpd.shutdown, daemon=True).start()
+        app.quit_event.set()
 
     signal.signal(signal.SIGINT, on_signal)
     signal.signal(signal.SIGTERM, on_signal)
 
     app.boot()
+    app.updater.start()
+    threading.Thread(target=httpd.serve_forever, kwargs={"poll_interval": 0.25}, name="http", daemon=True).start()
     print(f"✦ Ambilight prêt → {url}  (Ctrl+C pour quitter)")
     if not args.no_browser:
         webbrowser.open(url)
-    try:
-        httpd.serve_forever(poll_interval=0.25)
-    finally:
-        print("\nArrêt…")
-        app.shutdown()
-        httpd.server_close()
-        sys.exit(0)
+
+    def should_exit() -> bool:
+        return app.quit_event.is_set() or app.updater.restart_requested.is_set()
+
+    menubar = None
+    if not args.no_menubar:
+        try:
+            from core.menubar import run_menubar
+            menubar = run_menubar
+        except Exception as e:
+            print(f"[menubar] indisponible : {e}")
+    if menubar:
+        menubar(app, url, should_exit, app.quit_event.set)
+    else:
+        while not should_exit():
+            time.sleep(0.3)
+
+    restart = app.updater.restart_requested.is_set() and not app.quit_event.is_set()
+    print("Redémarrage (code modifié)…" if restart else "Arrêt…")
+    httpd.shutdown()
+    httpd.server_close()
+    app.shutdown()
+    if restart:
+        # Relance propre dans un nouveau processus, une fois celui-ci terminé.
+        # (Un execv dans le même processus casse l'icône de la barre de menus.)
+        argv = [a for a in sys.argv[1:] if a != "--no-browser"] + ["--no-browser"]
+        if os.environ.get("AMBILIGHT_APP"):
+            bundle = Path(sys.executable).resolve().parents[2]  # …/Ambilight.app
+            relaunch = ["/usr/bin/open", "-g", "-a", str(bundle), "--args"] + argv
+        else:
+            relaunch = [sys.executable, "-u", str(Path(__file__).resolve())] + argv
+        waiter = f'while kill -0 {os.getpid()} 2>/dev/null; do sleep 0.1; done; exec "$@"'
+        subprocess.Popen(["/bin/sh", "-c", waiter, "sh"] + relaunch, start_new_session=True,
+                         stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    sys.exit(0)
 
 
 if __name__ == "__main__":

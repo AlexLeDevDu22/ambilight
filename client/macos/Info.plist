@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleName</key><string>Ambilight</string>
+  <key>CFBundleDisplayName</key><string>Ambilight</string>
+  <key>CFBundleIdentifier</key><string>local.ambilight.app</string>
+  <key>CFBundleExecutable</key><string>Ambilight</string>
+  <key>CFBundleIconFile</key><string>Ambilight</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>2.0</string>
+  <key>CFBundleVersion</key><string>2</string>
+  <key>LSMinimumSystemVersion</key><string>12.3</string>
+  <key>LSUIElement</key><true/>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>NSMicrophoneUsageDescription</key><string>Ambilight écoute la musique (via BlackHole) pour faire réagir les LEDs.</string>
+  <key>NSAppleEventsUsageDescription</key><string>Ambilight lit le morceau Spotify en cours pour reprendre les couleurs de la pochette.</string>
+</dict>
+</plist>

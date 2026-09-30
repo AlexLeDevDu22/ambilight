@@ -14,9 +14,9 @@ from pathlib import Path
 CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.json"
 
 LED_MODES = ("screen", "sound", "ambient", "color")
-LED_SOUND_EFFECTS = ("pulse", "ripples", "spectrum")
+LED_SOUND_EFFECTS = ("pulse", "ripples", "spectrum", "strobe")
 LED_AMBIENT_EFFECTS = ("aurora", "flow", "breathe", "rainbow")
-MOUSE_MODES = ("sound", "flow", "breathe", "aurora", "color")
+MOUSE_MODES = ("sound", "flow", "breathe", "aurora", "color", "sync")
 MOUSE_SOUND_EFFECTS = ("pulse", "spin")
 
 DEFAULTS = {
@@ -29,6 +29,7 @@ DEFAULTS = {
         "sensitivity": 1.0,
         "speed": 0.5,
         "smoothing": 0.5,
+        "letterbox": True,
         "colors": ["#ff4d6d", "#7b5cff"],
     },
     "mouse": {
@@ -44,7 +45,7 @@ DEFAULTS = {
     "hardware": {
         "serial_port": "auto",
         "screen_index": 0,
-        "fps": 30,
+        "fps": 60,
         "gamma": 2.0,
         "saturation": 1.6,
         "border_depth_px": 300,
@@ -55,6 +56,10 @@ DEFAULTS = {
             "left_count": 20,
             "bottom_right_count": 0,
         },
+    },
+    "general": {
+        # Écran verrouillé / éteint / Mac en veille → tout s'éteint, puis se rallume
+        "smart_sleep": True,
     },
     # Ce qui tournait à la fermeture : relancé automatiquement au démarrage.
     "run": {"leds": False, "mouse": False},
@@ -105,6 +110,7 @@ def validate(cfg: dict) -> dict:
     L["sensitivity"] = _clamp(src_l.get("sensitivity"), 0.3, 2.5, d["leds"]["sensitivity"])
     L["speed"] = _clamp(src_l.get("speed"), 0.0, 1.0, d["leds"]["speed"])
     L["smoothing"] = _clamp(src_l.get("smoothing"), 0.0, 0.95, d["leds"]["smoothing"])
+    L["letterbox"] = bool(src_l.get("letterbox", d["leds"]["letterbox"]))
     colors = src_l.get("colors")
     if isinstance(colors, list) and len(colors) >= 2:
         L["colors"] = [_hex(colors[0], d["leds"]["colors"][0]), _hex(colors[1], d["leds"]["colors"][1])]
@@ -137,6 +143,8 @@ def validate(cfg: dict) -> dict:
     if total == 0 or total > MAX_LEDS:
         H["led_sides"] = copy.deepcopy(d["hardware"]["led_sides"])
 
+    src_g = cfg.get("general") or {}
+    out["general"]["smart_sleep"] = bool(src_g.get("smart_sleep", d["general"]["smart_sleep"]))
     out["run"] = {"leds": bool(src_r.get("leds", False)), "mouse": bool(src_r.get("mouse", False))}
     return out
 

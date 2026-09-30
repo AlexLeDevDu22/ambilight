@@ -1,14 +1,21 @@
 #include "buffer.h"
+#include "remote.h"
 
 bool buffer_has_data() {
     return Serial.available() >= 4;
 }
 
-bool buffer_check() {
-    if (!buffer_has_data()) return false;
+PacketType buffer_check() {
+    if (!buffer_has_data()) return PACKET_NONE;
     // Lire header
-    if (Serial.read() != 0xAA) return false;
-    if (Serial.read() != 0xBB) return false;
+    if (Serial.read() != 0xAA) return PACKET_NONE;
+    int type = Serial.read();
+    if (type == 0xCC) {           // ping : 2 octets de bourrage
+        Serial.read();
+        Serial.read();
+        return PACKET_PING;
+    }
+    if (type != 0xBB) return PACKET_NONE;
     
     // Lire nombre de LEDs
     uint16_t ledCount = (uint16_t)Serial.read();
@@ -16,7 +23,7 @@ bool buffer_check() {
     
     if (ledCount == 0 || ledCount > NUM_LEDS) {
         Serial.println("ERR:BAD_COUNT: " + String(ledCount));
-        return false;
+        return PACKET_NONE;
     }
 
     // Lire les RGB
@@ -33,7 +40,7 @@ bool buffer_check() {
             if (millis() - t0 > RECEIVE_TIMEOUT) {
                 Serial.println("ERR:TIMEOUT");
                 leds_clear();
-                return false;
+                return PACKET_NONE;
             }
         }
 
@@ -44,7 +51,8 @@ bool buffer_check() {
         received += 3;
     }
 
+    remote_wait_idle(80);   // ne pas abîmer une trame IR en cours
     leds_show();
     Serial.println("OK");
-    return true;
+    return PACKET_FRAME;
 }

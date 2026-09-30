@@ -82,7 +82,30 @@ function merge(a, b) {
 /* ------------------------------------------------------------------ */
 /* Réglages : modification locale immédiate + envoi groupé             */
 /* ------------------------------------------------------------------ */
+let lastLocalChange = 0;
+let cfgVersion = null;
+let cfgFetching = false;
+
+// Réglages modifiés ailleurs (télécommande, barre de menus, autre onglet) :
+// on les recharge, sauf si l'utilisateur est en train de modifier ici.
+async function syncConfig(version) {
+  if (cfgVersion === null) { cfgVersion = version; return; }
+  if (version === cfgVersion || cfgFetching) return;
+  if (Date.now() - lastLocalChange < 700 || Object.keys(pending).length) return;
+  cfgFetching = true;
+  try {
+    const r = await fetch("/api/state");
+    const s = await r.json();
+    cfg = s.config;
+    cfgVersion = version;
+    buildLeds();
+    refresh();
+  } catch { /* on réessaiera au prochain message */ }
+  cfgFetching = false;
+}
+
 function change(path, value) {
+  lastLocalChange = Date.now();
   setIn(cfg, path, value);
   merge(pending, patchFor(path, value));
   refresh();
@@ -425,8 +448,103 @@ function setHidden(el, v) {
 /* Live                                                                */
 /* ------------------------------------------------------------------ */
 let lastAccent = "";
+/* ------------------------------------------------------------------ */
+/* Musique en cours : bandeau, animations de changement de morceau      */
+/* ------------------------------------------------------------------ */
+const np = { track: null, cover: null };
+const eqBars = () => $$("#npEq i");
+
+function swapText(el, text, instant) {
+  if (instant) { el.textContent = text; return; }
+  el.classList.remove("text-in");
+  el.classList.add("text-out");
+  setTimeout(() => {
+    el.textContent = text;
+    el.classList.remove("text-out");
+    void el.offsetWidth;  // relance l'animation
+    el.classList.add("text-in");
+  }, 220);
+}
+
+let coverFront = 0, bgFront = 0, coverTimer = null;
+function swapCover(url) {
+  const img = new Image();
+  img.onload = () => {
+    if (url !== np.cover) return;  // un autre morceau est déjà arrivé
+    clearTimeout(coverTimer);      // une animation en cours est remplacée proprement
+    const arts = [$("#npArtA"), $("#npArtB")];
+    const front = arts[coverFront], back = arts[1 - coverFront];
+    back.src = url;
+    back.className = "art-in";
+    front.className = front.getAttribute("src") ? "art-out" : "";
+    coverFront = 1 - coverFront;
+    coverTimer = setTimeout(() => { back.className = "front"; front.className = ""; }, 780);
+    // Fond flouté : fondu enchaîné
+    const bgs = [$("#npBgA"), $("#npBgB")];
+    const bgBack = bgs[1 - bgFront];
+    bgBack.style.backgroundImage = `url("${url}")`;
+    bgBack.classList.add("show");
+    bgs[bgFront].classList.remove("show");
+    bgFront = 1 - bgFront;
+  };
+  img.src = url;
+}
+
+function updateNowPlaying(sp, levels) {
+  const hero = $("#npHero");
+  hero.classList.toggle("off", !sp.playing);
+  if (!sp.playing) return;
+
+  const key = `${sp.track}|${sp.artist}`;
+  const first = np.track === null;
+  if (key !== np.track) {
+    np.track = key;
+    swapText($("#npTrack"), sp.track, first);
+    swapText($("#npArtist"), sp.artist || "", first);
+    if (!first) {
+      const shine = $(".np-shine");
+      shine.classList.remove("go");
+      void shine.offsetWidth;
+      shine.classList.add("go");
+    }
+  }
+  if (sp.cover && sp.cover !== np.cover) {
+    np.cover = sp.cover;
+    swapCover(sp.cover);
+  }
+  const cols = sp.colors || [];
+  if (_changed($("#npDots"), "cols", cols.join())) {
+    $("#npDots").innerHTML = cols.map(c => `<i style="background:${c};color:${c}"></i>`).join("");
+  }
+
+  // Égaliseur : vrai son si un mode Son tourne, sinon animation douce
+  const eq = $("#npEq");
+  if (levels && levels.length) {
+    eq.classList.remove("idle");
+    eqBars().forEach((bar, i) => setStyle(bar, "transform", `scaleY(${(0.1 + 0.9 * (levels[i] || 0)).toFixed(2)})`));
+  } else {
+    eq.classList.add("idle");
+  }
+}
+
+let webVersion = null;
+let lastRemoteId = null;
+let toastTimer;
+function showToast(text) {
+  const t = $("#toast");
+  t.textContent = text;
+  t.hidden = false;
+  requestAnimationFrame(() => t.classList.add("show"));
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.classList.remove("show"); setTimeout(() => { t.hidden = true; }, 250); }, 1600);
+}
 function applyLive(l) {
   live = l;
+  // Interface modifiée sur le disque → rechargement automatique
+  if (l.web) {
+    if (webVersion && l.web !== webVersion) { location.reload(); return; }
+    webVersion = l.web;
+  }
   // Ruban
   const ledsState = l.leds.running
     ? l.serial.connected
@@ -437,13 +555,13 @@ function applyLive(l) {
       : "warn";
   $("#ledsPower").classList.toggle("on", l.leds.running);
   setClass($("#ledsDot"), "sdot " + ledsState);
+  const asleep = l.sleep && l.sleep.on ? `en veille (${l.sleep.reason})` : "";
   setText(
     $("#ledsStatus"),
     l.leds.running
       ? l.leds.status
-      : l.serial.connected
-        ? "arrêté · Arduino prêt"
-        : l.serial.status,
+      : asleep ||
+          (l.serial.connected ? "arrêté · Arduino prêt" : l.serial.status),
   );
   setText(
     $("#ledsFps"),
@@ -463,7 +581,7 @@ function applyLive(l) {
   );
   setText(
     $("#mouseStatus"),
-    l.mouse.running ? l.mouse.status : `arrêtée · ${l.mouse.status}`,
+    l.mouse.running ? l.mouse.status : asleep || `arrêtée · ${l.mouse.status}`,
   );
   paintMouse(l.mouse.preview);
   const needPerm = /autorise/i.test(l.mouse.responsive);
@@ -488,18 +606,17 @@ function applyLive(l) {
     !(hint && l.mouse.running && cfg.mouse.mode === "sound"),
   );
 
+  if (l.cfg !== undefined) syncConfig(l.cfg);
+
+  // Télécommande : petite notification
+  if (l.remote && l.remote.id !== lastRemoteId) {
+    if (lastRemoteId !== null && l.remote.text) showToast(l.remote.text);
+    lastRemoteId = l.remote.id;
+  }
+
   // Spotify
   const sp = l.spotify;
-  setHidden($("#nowPlaying"), !sp.playing);
-  if (sp.playing) {
-    setAttr($("#npCover"), "src", sp.cover);
-    setText($("#npTrack"), sp.track);
-    setText($("#npArtist"), sp.artist || "");
-    const dots = (sp.colors || [])
-      .map((c) => `<i style="background:${c}"></i>`)
-      .join("");
-    if (_changed($("#npDots"), "html", dots)) $("#npDots").innerHTML = dots;
-  }
+  updateNowPlaying(sp, l.levels);
   const coverKey = `${sp.cover}|${(sp.colors || []).join()}`;
   $$('.pal[data-value="cover"]').forEach((b) => {
     if (!_changed(b, "cover", coverKey)) return;

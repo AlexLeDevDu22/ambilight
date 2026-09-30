@@ -10,8 +10,8 @@ import time
 
 import numpy as np
 
-from .screen import ScreenMapper, led_layout, open_capture
-from .strip_effects import AmbientEffect, SoundEffect, StripGeometry, WipeTransition, color_mode
+from .screen import LetterboxDetector, ScreenMapper, led_layout, open_capture
+from .strip_effects import OUTRO_DURATION, AmbientEffect, SoundEffect, StripGeometry, WipeTransition, color_mode, outro_frame
 
 
 class StripEngine:
@@ -27,6 +27,9 @@ class StripEngine:
         self.status = "arrêté"
         self.preview = b""
         self.fps = 0.0
+        # Dernière image (avant luminosité) + position des LEDs : lue par la
+        # souris en mode synchro « Ruban ».
+        self.shared: tuple | None = None
 
     # ------------------------------------------------------------------
 
@@ -50,6 +53,7 @@ class StripEngine:
         n = self._num_leds()
         self._link.blackout(n)
         self.running = False
+        self.shared = None
         self.preview = bytes(3 * n)
         self.status = "arrêté"
         self.fps = 0.0
@@ -63,9 +67,11 @@ class StripEngine:
         geom_key, geom = None, None
         capture, capture_idx, capture_t0 = None, None, 0.0
         mapper = ScreenMapper()
+        letterbox = LetterboxDetector()
         sound = SoundEffect()
         wipe = WipeTransition()
         wipe_t = 0.0
+        link_was_connected = False
         look = None  # mode / effet / palette / couleurs : un changement déclenche la transition
         ambient = AmbientEffect()
         audio_on = False
@@ -97,6 +103,15 @@ class StripEngine:
                             wipe.trigger(geom.n)
                             wipe_t = now
                         look = new_look
+                    # Arduino (re)connecté (démarrage du serveur : il redémarre
+                    # ~1,6 s) → l'animation d'allumage part de là, depuis le noir,
+                    # sinon elle se jouerait dans le vide.
+                    connected = self._link.connected
+                    if connected and not link_was_connected:
+                        wipe.last = None
+                        wipe.trigger(geom.n)
+                        wipe_t = now
+                    link_was_connected = connected
                     # L'audio n'est ouvert que si le mode son est actif.
                     if (mode == "sound") != audio_on:
                         (self._audio.acquire if not audio_on else self._audio.release)()
@@ -120,8 +135,17 @@ class StripEngine:
                                 self.status = "capture d'écran refusée (autorise l'enregistrement d'écran)"
                             self._stop.wait(0.05)
                             continue
-                        colors = mapper.map(frame, H, L["smoothing"], capture.native_w)
-                        self.status = "écran"
+                        native_w = capture.native_w
+                        film = ""
+                        if L["letterbox"]:
+                            t, b, l, r = letterbox.update(frame, now)
+                            if t or b or l or r:
+                                h, w = frame.shape[:2]
+                                frame = frame[t:h - b, l:w - r]
+                                native_w = native_w * frame.shape[1] / w
+                                film = f" · film {letterbox.aspect((h, w))}"
+                        colors = mapper.map(frame, H, L["smoothing"], native_w)
+                        self.status = "écran" + film
                     elif mode == "sound":
                         if now - last_audio_check > 1.0:
                             self._audio.ensure()
@@ -137,7 +161,9 @@ class StripEngine:
                         colors = color_mode(geom, L["colors"])
                         self.status = "couleur"
 
-                    colors = wipe.apply(np.clip(colors, 0.0, 1.0), geom, now) * L["brightness"]
+                    colors = wipe.apply(np.clip(colors, 0.0, 1.0), geom, now)
+                    self.shared = (colors, geom.pos)
+                    colors = colors * L["brightness"]
                     out = (np.power(colors, gamma) * 255.0 + 0.5).astype(np.uint8)
                     self._link.submit(out)
                     # Aperçu pour l'interface : couleurs perçues (sans gamma)
@@ -163,7 +189,27 @@ class StripEngine:
                     capture = None
                     self._stop.wait(1.0)
         finally:
+            try:
+                self._outro(wipe.last, geom)
+            except Exception as e:
+                print(f"[strip] extinction : {e}")
             if capture is not None:
                 capture.close()
             if audio_on:
                 self._audio.release()
+
+    def _outro(self, last, geom):
+        """Animation d'extinction (lumière blanche qui descend) avant le noir."""
+        if last is None or geom is None or len(last) != geom.n or not self._link.connected:
+            return
+        cfg = self._store.get()
+        bright, gamma = cfg["leds"]["brightness"], cfg["hardware"]["gamma"]
+        t0 = time.perf_counter()
+        while True:
+            p = (time.perf_counter() - t0) / OUTRO_DURATION
+            if p >= 1.0:
+                break
+            colors = outro_frame(last, geom, p) * bright
+            self._link.submit((np.power(colors, gamma) * 255.0 + 0.5).astype(np.uint8))
+            self.preview = (colors * 255).astype(np.uint8).tobytes()
+            time.sleep(1 / 60)

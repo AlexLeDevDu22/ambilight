@@ -67,8 +67,14 @@ class SoundEffect:
         strength = min(1.0, a["beat_strength"] * sens)
 
         self.phase = (self.phase + dt * (0.015 + 0.12 * energy + 0.25 * bass ** 3)) % 1.0
+        if effect != getattr(self, "_effect", None):
+            # Chaque effet a ses propres vagues (Pulse ≠ Ondes)
+            self._effect = effect
+            self.waves = []
         if effect == "spectrum":
             return self._spectrum(g, pal, a, sens, bass, dt)
+        if effect == "strobe":
+            return self._strobe(g, pal, mid, beat, strength, dt)
         if effect == "ripples":
             return self._ripples(g, pal, bass, mid, high, beat, snare, strength, dt)
         return self._pulse(g, pal, bass, mid, high, energy, beat, snare, strength, dt)
@@ -139,6 +145,32 @@ class SoundEffect:
             out = out + band[:, None] * w["c"] * w["s"]
             alive.append(w)
         self.waves = alive[-14:]
+        return out
+
+    # ---- « Strobe » : flashs francs sur les kicks ----------------------------
+    # Au plus 4 flashs par seconde (confort visuel). Gros kick → tout le
+    # ruban flashe avec un cœur blanc ; kick plus léger → une moitié, en
+    # alternant gauche / droite.
+    def _strobe(self, g, pal, mid, beat, strength, dt):
+        self._since_flash = getattr(self, "_since_flash", 1.0) + dt
+        if beat and self._since_flash >= 0.25:
+            self._since_flash = 0.0
+            self._color_i += 1
+            self._strobe_col = pal.color(self._color_i)
+            self._strobe_lvl = min(1.0, 0.55 + 0.6 * strength)
+            self._strobe_white = max(0.0, (strength - 0.7) / 0.3)
+            if strength > 0.7:
+                self._strobe_side = 0.0
+            else:  # alterne gauche / droite
+                self._strobe_flip = -getattr(self, "_strobe_flip", -1.0)
+                self._strobe_side = self._strobe_flip
+        out = pal.sample(g.t * 0.5 + self.phase) * (0.02 + 0.1 * mid)
+        lvl = getattr(self, "_strobe_lvl", 0.0)
+        if lvl > 0.01:
+            col = self._strobe_col * (1 - 0.6 * self._strobe_white) + 0.6 * self._strobe_white
+            mask = 1.0 if self._strobe_side == 0.0 else (g.side == self._strobe_side).astype(np.float32)[:, None]
+            out = out + col * lvl * mask
+            self._strobe_lvl = lvl * np.exp(-dt * 14)  # extinction rapide (~70 ms)
         return out
 
     # ---- « Spectre » : égaliseur en miroir (graves en bas, aigus en haut) ---
@@ -224,3 +256,16 @@ class WipeTransition:
                 colors = np.clip(out + white[:, None], 0, 1)
         self.last = colors
         return colors
+
+
+OUTRO_DURATION = 0.55
+
+
+def outro_frame(last: np.ndarray, g: StripGeometry, p: float) -> np.ndarray:
+    """Extinction : une lumière blanche descend du haut vers le bas des deux
+    côtés et laisse le noir derrière elle (sens inverse de l'allumage)."""
+    p = p * p * (3 - 2 * p)
+    front = 1.08 - 1.16 * p                                     # haut → bas
+    keep = _smoothstep(front + 0.03, front - 0.03, g.rise)[:, None]   # 1 sous le front
+    white = np.exp(-((g.rise - front) / 0.05) ** 2) * (1.0 - 0.35 * p)
+    return np.clip(last * keep + white[:, None], 0, 1)

@@ -1,186 +1,276 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ambilight</title>
-  <link rel="icon" href="/icon.png">
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <div class="bg-glow" id="bgGlow"></div>
 
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-dot"></span>
-      <span class="brand-name">ambilight</span>
-      <span class="saved" id="saved">enregistré</span>
-    </div>
-    <div class="now-playing" id="nowPlaying" hidden>
-      <img id="npCover" alt="">
-      <div class="np-text">
-        <div class="np-track" id="npTrack"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ambilight</title>
+    <link rel="icon" href="/icon.png">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="bg-glow" id="bgGlow"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Ambilight</span>
+        <span class="saved" id="saved">enregistré</span>
+      </div>
+    </header>
+
+    <!-- Musique en cours (Spotify) -->
+    <section class="np-hero off" id="npHero" aria-live="polite">
+      <div class="np-backdrop">
+        <div class="np-bg" id="npBgA"></div>
+        <div class="np-bg" id="npBgB"></div>
+      </div>
+      <div class="np-art"><img id="npArtA" alt=""><img id="npArtB" alt=""></div>
+      <div class="np-meta">
+        <div class="np-label"><span class="np-live"></span>En lecture</div>
+        <div class="np-title" id="npTrack"></div>
         <div class="np-artist" id="npArtist"></div>
+        <div class="np-dots" id="npDots"></div>
       </div>
-      <div class="np-dots" id="npDots"></div>
-    </div>
-  </header>
+      <div class="np-eq idle" id="npEq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="np-shine"></div>
+    </section>
 
-  <div class="offline" id="offline" hidden>Serveur injoignable — relance <code>./start.sh</code></div>
+    <div class="offline" id="offline" hidden>Serveur injoignable — relance <code>./start.sh</code></div>
 
-  <main class="grid">
-    <!-- ============================ RUBAN LED ============================ -->
-    <section class="card" id="cardLeds">
-      <div class="card-head">
-        <div>
-          <h2>Ruban LED</h2>
-          <div class="status"><span class="sdot" id="ledsDot"></span><span id="ledsStatus">—</span><span class="fps" id="ledsFps"></span></div>
+    <main class="grid">
+      <!-- ============================ RUBAN LED ============================ -->
+      <section class="card" id="cardLeds">
+        <div class="card-head">
+          <div>
+            <h2>Ruban LED</h2>
+            <div class="status"><span class="sdot" id="ledsDot"></span><span id="ledsStatus">—</span><span class="fps"
+                  id="ledsFps"></span></div>
+          </div>
+          <button class="power" id="ledsPower" data-target="leds" aria-label="Allumer / éteindre le ruban">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v8M6.3 6.3a8 8 0 1 0 11.4 0" />
+            </svg>
+          </button>
         </div>
-        <button class="power" id="ledsPower" data-target="leds" aria-label="Allumer / éteindre le ruban">
-          <svg viewBox="0 0 24 24"><path d="M12 3v8M6.3 6.3a8 8 0 1 0 11.4 0" /></svg>
-        </button>
-      </div>
 
-      <div class="hint" id="ledsHint" hidden></div>
+        <div class="hint" id="ledsHint" hidden></div>
 
-      <div class="preview-wrap">
-        <div class="screen" id="ledScreen"><div class="screen-inner" id="ledScreenInner"></div><canvas id="ledCanvas"></canvas></div>
-      </div>
-
-      <div class="seg" data-path="leds.mode">
-        <button data-value="screen">Écran</button>
-        <button data-value="sound">Son</button>
-        <button data-value="ambient">Ambiance</button>
-        <button data-value="color">Couleur</button>
-      </div>
-
-      <div class="panel" data-show="leds.mode=sound">
-        <div class="chips" data-path="leds.sound_effect">
-          <button data-value="pulse">Pulse</button>
-          <button data-value="ripples">Ondes</button>
-          <button data-value="spectrum">Spectre</button>
+        <div class="preview-wrap">
+          <div class="screen" id="ledScreen">
+            <div class="screen-inner" id="ledScreenInner"></div><canvas id="ledCanvas"></canvas>
+          </div>
         </div>
-      </div>
-      <div class="panel" data-show="leds.mode=ambient">
-        <div class="chips" data-path="leds.ambient_effect">
-          <button data-value="aurora">Aurore</button>
+
+        <div class="seg" data-path="leds.mode">
+          <button data-value="screen">Écran</button>
+          <button data-value="sound">Son</button>
+          <button data-value="ambient">Ambiance</button>
+          <button data-value="color">Couleur</button>
+        </div>
+
+        <div class="panel" data-show="leds.mode=sound">
+          <div class="chips" data-path="leds.sound_effect">
+            <button data-value="pulse">Pulse</button>
+            <button data-value="ripples">Ondes</button>
+            <button data-value="spectrum">Spectre</button>
+            <button data-value="strobe">Strobe</button>
+          </div>
+        </div>
+        <div class="panel" data-show="leds.mode=screen">
+          <label class="toggle">
+            <input type="checkbox" data-path="leds.letterbox">
+            <span class="switch"></span>
+            <span class="toggle-text"><b>Films : ignorer les bandes noires</b><small>Détectées automatiquement (films
+                larges, vidéos 4:3)</small></span>
+          </label>
+        </div>
+        <div class="panel" data-show="leds.mode=ambient">
+          <div class="chips" data-path="leds.ambient_effect">
+            <button data-value="aurora">Aurore</button>
+            <button data-value="flow">Flow</button>
+            <button data-value="breathe">Respiration</button>
+            <button data-value="rainbow">Arc-en-ciel</button>
+          </div>
+        </div>
+        <div class="panel" data-show="leds.mode=color">
+          <div class="pickers">
+            <label class="picker"><input type="color" data-path="leds.colors.0"><span>Bas</span></label>
+            <label class="picker"><input type="color" data-path="leds.colors.1"><span>Haut</span></label>
+            <div class="quick" data-quick="leds"></div>
+          </div>
+        </div>
+
+        <div class="palettes" data-path="leds.palette" data-show="leds.mode=sound|ambient"
+            data-hide="leds.ambient_effect=rainbow&leds.mode=ambient"></div>
+
+        <div class="sliders">
+          <label class="slider"><span>Luminosité</span><input type="range" min="0.05" max="1" step="0.01"
+                data-path="leds.brightness"><output></output></label>
+          <label class="slider" data-show="leds.mode=sound"><span>Sensibilité</span><input type="range" min="0.3"
+                max="2.5" step="0.05" data-path="leds.sensitivity"><output></output></label>
+          <label class="slider" data-show="leds.mode=ambient"><span>Vitesse</span><input type="range" min="0" max="1"
+                step="0.01" data-path="leds.speed"><output></output></label>
+          <label class="slider" data-show="leds.mode=screen"><span>Douceur</span><input type="range" min="0" max="0.95"
+                step="0.01" data-path="leds.smoothing"><output></output></label>
+        </div>
+      </section>
+
+      <!-- ============================== SOURIS ============================== -->
+      <section class="card" id="cardMouse">
+        <div class="card-head">
+          <div>
+            <h2>Souris <small>Revenger ST</small></h2>
+            <div class="status"><span class="sdot" id="mouseDot"></span><span id="mouseStatus">—</span></div>
+          </div>
+          <button class="power" id="mousePower" data-target="mouse" aria-label="Allumer / éteindre la souris">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v8M6.3 6.3a8 8 0 1 0 11.4 0" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="hint" id="mouseHint" hidden></div>
+
+        <div class="preview-wrap">
+          <div class="mouse" id="mousePreview">
+            <div class="mouse-halo" id="mHalo"></div>
+            <svg class="mouse-body" viewBox="0 0 120 200" aria-hidden="true">
+              <defs>
+                <radialGradient id="gWheel">
+                  <stop offset="0" stop-color="#000" stop-opacity=".75" />
+                  <stop offset="1" stop-color="#000" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="gLogo">
+                  <stop offset="0" stop-color="#000" stop-opacity=".75" />
+                  <stop offset="1" stop-color="#000" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <path class="shell"
+                  d="M60 8C94 8 106 42 106 90C106 150 91 192 60 192C29 192 14 150 14 90C14 42 26 8 60 8Z" />
+              <path class="split" d="M60 8V66M18 70C40 62 80 62 102 70" />
+              <circle cx="60" cy="39" r="22" fill="url(#gWheel)" />
+              <circle cx="60" cy="127" r="26" fill="url(#gLogo)" />
+              <rect class="wheel" id="mWheel" x="54" y="26" width="12" height="26" rx="6" />
+              <path class="logo" id="mLogo" d="M60 116l11 8-4 13H53l-4-13z" />
+            </svg>
+            <div class="ring">
+              <div class="ring-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seg" data-path="mouse.mode">
+          <button data-value="sound">Son</button>
           <button data-value="flow">Flow</button>
           <button data-value="breathe">Respiration</button>
-          <button data-value="rainbow">Arc-en-ciel</button>
+          <button data-value="aurora">Aurore</button>
+          <button data-value="color">Couleur</button>
+          <button data-value="sync">Ruban</button>
         </div>
-      </div>
-      <div class="panel" data-show="leds.mode=color">
-        <div class="pickers">
-          <label class="picker"><input type="color" data-path="leds.colors.0"><span>Bas</span></label>
-          <label class="picker"><input type="color" data-path="leds.colors.1"><span>Haut</span></label>
-          <div class="quick" data-quick="leds"></div>
+
+        <div class="panel" data-show="mouse.mode=sync">
+          <p class="note">La souris prolonge le ruban : contour = bas de l'écran, molette = côté gauche, logo = haut.
+          </p>
         </div>
-      </div>
-
-      <div class="palettes" data-path="leds.palette" data-show="leds.mode=sound|ambient" data-hide="leds.ambient_effect=rainbow&leds.mode=ambient"></div>
-
-      <div class="sliders">
-        <label class="slider"><span>Luminosité</span><input type="range" min="0.05" max="1" step="0.01" data-path="leds.brightness"><output></output></label>
-        <label class="slider" data-show="leds.mode=sound"><span>Sensibilité</span><input type="range" min="0.3" max="2.5" step="0.05" data-path="leds.sensitivity"><output></output></label>
-        <label class="slider" data-show="leds.mode=ambient"><span>Vitesse</span><input type="range" min="0" max="1" step="0.01" data-path="leds.speed"><output></output></label>
-        <label class="slider" data-show="leds.mode=screen"><span>Douceur</span><input type="range" min="0" max="0.95" step="0.01" data-path="leds.smoothing"><output></output></label>
-      </div>
-    </section>
-
-    <!-- ============================== SOURIS ============================== -->
-    <section class="card" id="cardMouse">
-      <div class="card-head">
-        <div>
-          <h2>Souris <small>Revenger ST</small></h2>
-          <div class="status"><span class="sdot" id="mouseDot"></span><span id="mouseStatus">—</span></div>
+        <div class="panel" data-show="mouse.mode=sound">
+          <div class="chips" data-path="mouse.sound_effect">
+            <button data-value="pulse">Pulse</button>
+            <button data-value="spin">Rotation</button>
+          </div>
         </div>
-        <button class="power" id="mousePower" data-target="mouse" aria-label="Allumer / éteindre la souris">
-          <svg viewBox="0 0 24 24"><path d="M12 3v8M6.3 6.3a8 8 0 1 0 11.4 0" /></svg>
-        </button>
-      </div>
-
-      <div class="hint" id="mouseHint" hidden></div>
-
-      <div class="preview-wrap">
-        <div class="mouse" id="mousePreview">
-          <div class="mouse-halo" id="mHalo"></div>
-          <svg class="mouse-body" viewBox="0 0 120 200" aria-hidden="true">
-            <defs>
-              <radialGradient id="gWheel"><stop offset="0" stop-color="#000" stop-opacity=".75"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-              <radialGradient id="gLogo"><stop offset="0" stop-color="#000" stop-opacity=".75"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-            </defs>
-            <path class="shell" d="M60 8C94 8 106 42 106 90C106 150 91 192 60 192C29 192 14 150 14 90C14 42 26 8 60 8Z" />
-            <path class="split" d="M60 8V66M18 70C40 62 80 62 102 70" />
-            <circle cx="60" cy="39" r="22" fill="url(#gWheel)" />
-            <circle cx="60" cy="127" r="26" fill="url(#gLogo)" />
-            <rect class="wheel" id="mWheel" x="54" y="26" width="12" height="26" rx="6" />
-            <path class="logo" id="mLogo" d="M60 116l11 8-4 13H53l-4-13z" />
-          </svg>
-          <div class="ring"><div class="ring-fill"></div></div>
+        <div class="panel" data-show="mouse.mode=color">
+          <div class="pickers">
+            <label class="picker"><input type="color" data-path="mouse.colors.ring"><span>Contour</span></label>
+            <label class="picker"><input type="color" data-path="mouse.colors.wheel"><span>Molette</span></label>
+            <label class="picker"><input type="color" data-path="mouse.colors.logo"><span>Logo</span></label>
+          </div>
         </div>
-      </div>
 
-      <div class="seg" data-path="mouse.mode">
-        <button data-value="sound">Son</button>
-        <button data-value="flow">Flow</button>
-        <button data-value="breathe">Respiration</button>
-        <button data-value="aurora">Aurore</button>
-        <button data-value="color">Couleur</button>
-      </div>
+        <div class="palettes" data-path="mouse.palette" data-show="mouse.mode=sound|flow|breathe|aurora"></div>
 
-      <div class="panel" data-show="mouse.mode=sound">
-        <div class="chips" data-path="mouse.sound_effect">
-          <button data-value="pulse">Pulse</button>
-          <button data-value="spin">Rotation</button>
+        <div class="sliders">
+          <label class="slider"><span>Luminosité</span><input type="range" min="0.05" max="1" step="0.01"
+                data-path="mouse.brightness"><output></output></label>
+          <label class="slider" data-show="mouse.mode=sound"><span>Sensibilité</span><input type="range" min="0.3"
+                max="2.5" step="0.05" data-path="mouse.sensitivity"><output></output></label>
+          <label class="slider" data-show="mouse.mode=flow|breathe|aurora"><span>Vitesse</span><input type="range"
+                min="0" max="1" step="0.01" data-path="mouse.speed"><output></output></label>
         </div>
-      </div>
-      <div class="panel" data-show="mouse.mode=color">
-        <div class="pickers">
-          <label class="picker"><input type="color" data-path="mouse.colors.ring"><span>Contour</span></label>
-          <label class="picker"><input type="color" data-path="mouse.colors.wheel"><span>Molette</span></label>
-          <label class="picker"><input type="color" data-path="mouse.colors.logo"><span>Logo</span></label>
-        </div>
-      </div>
 
-      <div class="palettes" data-path="mouse.palette" data-show="mouse.mode=sound|flow|breathe|aurora"></div>
+        <label class="toggle">
+          <input type="checkbox" data-path="mouse.responsive">
+          <span class="switch"></span>
+          <span class="toggle-text"><b>Réactif</b><small id="respHint">Clic gauche ↺ · clic droit ↻ · molette · clic
+              milieu</small></span>
+        </label>
+      </section>
+    </main>
 
-      <div class="sliders">
-        <label class="slider"><span>Luminosité</span><input type="range" min="0.05" max="1" step="0.01" data-path="mouse.brightness"><output></output></label>
-        <label class="slider" data-show="mouse.mode=sound"><span>Sensibilité</span><input type="range" min="0.3" max="2.5" step="0.05" data-path="mouse.sensitivity"><output></output></label>
-        <label class="slider" data-show="mouse.mode=flow|breathe|aurora"><span>Vitesse</span><input type="range" min="0" max="1" step="0.01" data-path="mouse.speed"><output></output></label>
-      </div>
-
-      <label class="toggle">
-        <input type="checkbox" data-path="mouse.responsive">
+    <!-- ========================= RÉGLAGES AVANCÉS ========================= -->
+    <details class="advanced">
+      <summary>Réglages avancés</summary>
+      <div class="adv-grid">
+        <label class="field"><span>Port Arduino</span><select data-path="hardware.serial_port"
+              id="portSelect"></select><small id="serialStatus"></small></label>
+        <label class="field"><span>Écran capturé</span><select data-path="hardware.screen_index" data-number
+              id="screenSelect"></select></label>
+        <label class="field"><span>Images / s max</span><input type="number" min="10" max="60" data-path="hardware.fps"
+              data-number></label>
+        <label class="field"><span>Profondeur capturée (px)</span><input type="number" min="20" max="800" step="10"
+              data-path="hardware.border_depth_px" data-number></label>
+        <label class="slider"><span>Gamma</span><input type="range" min="1" max="3" step="0.1"
+              data-path="hardware.gamma"><output></output></label>
+        <label class="slider"><span>Saturation écran</span><input type="range" min="0.5" max="4" step="0.1"
+              data-path="hardware.saturation"><output></output></label>
+        <label class="toggle field-toggle">
+        <input type="checkbox" data-path="general.smart_sleep">
         <span class="switch"></span>
-        <span class="toggle-text"><b>Réactif</b><small id="respHint">Clic gauche ↺ · clic droit ↻ · molette · clic milieu</small></span>
+        <span class="toggle-text"><b>Veille intelligente</b><small>Écran verrouillé, éteint ou Mac en veille → tout s'éteint, puis se rallume au retour</small></span>
       </label>
-    </section>
-  </main>
-
-  <!-- ========================= RÉGLAGES AVANCÉS ========================= -->
-  <details class="advanced">
-    <summary>Réglages avancés</summary>
-    <div class="adv-grid">
-      <label class="field"><span>Port Arduino</span><select data-path="hardware.serial_port" id="portSelect"></select><small id="serialStatus"></small></label>
-      <label class="field"><span>Écran capturé</span><select data-path="hardware.screen_index" data-number id="screenSelect"></select></label>
-      <label class="field"><span>Images / s max</span><input type="number" min="10" max="60" data-path="hardware.fps" data-number></label>
-      <label class="field"><span>Profondeur capturée (px)</span><input type="number" min="20" max="800" step="10" data-path="hardware.border_depth_px" data-number></label>
-      <label class="slider"><span>Gamma</span><input type="range" min="1" max="3" step="0.1" data-path="hardware.gamma"><output></output></label>
-      <label class="slider"><span>Saturation écran</span><input type="range" min="0.5" max="4" step="0.1" data-path="hardware.saturation"><output></output></label>
-      <div class="field sides">
-        <span>LEDs par côté <em id="sidesTotal"></em></span>
-        <div class="sides-grid">
-          <label>Bas<input type="number" min="0" max="113" data-path="hardware.led_sides.bottom_left_count" data-number></label>
-          <label>Droite<input type="number" min="0" max="113" data-path="hardware.led_sides.right_count" data-number></label>
-          <label>Haut<input type="number" min="0" max="113" data-path="hardware.led_sides.top_count" data-number></label>
-          <label>Gauche<input type="number" min="0" max="113" data-path="hardware.led_sides.left_count" data-number></label>
-          <label>Bas (fin)<input type="number" min="0" max="113" data-path="hardware.led_sides.bottom_right_count" data-number></label>
+      <div class="field remote-help">
+          <span>Télécommande <em>(serveur arrêté : modes intégrés de l'Arduino)</em></span>
+          <dl>
+            <dt>POWER</dt>
+            <dd>tout allumer / éteindre</dd>
+            <dt>▶︎ · ST</dt>
+            <dd>ruban · souris on/off</dd>
+            <dt>VOL+ VOL−</dt>
+            <dd>luminosité</dd>
+            <dt>FUNC · EQ</dt>
+            <dd>mode ruban · mode souris suivant</dd>
+            <dt>|◀◀ ▶▶|</dt>
+            <dd>effet précédent / suivant</dd>
+            <dt>↑ ↓</dt>
+            <dd>palette</dd>
+            <dt>1 – 4</dt>
+            <dd>ruban : Écran, Son, Ambiance, Couleur</dd>
+            <dt>5 – 9 · 0</dt>
+            <dd>souris : Son, Flow, Respiration, Aurore, Couleur · Ruban</dd>
+          </dl>
+        </div>
+        <div class="field sides">
+          <span>LEDs par côté <em id="sidesTotal"></em></span>
+          <div class="sides-grid">
+            <label>Bas<input type="number" min="0" max="113" data-path="hardware.led_sides.bottom_left_count"
+                  data-number></label>
+            <label>Droite<input type="number" min="0" max="113" data-path="hardware.led_sides.right_count"
+                  data-number></label>
+            <label>Haut<input type="number" min="0" max="113" data-path="hardware.led_sides.top_count"
+                  data-number></label>
+            <label>Gauche<input type="number" min="0" max="113" data-path="hardware.led_sides.left_count"
+                  data-number></label>
+            <label>Bas (fin)<input type="number" min="0" max="113" data-path="hardware.led_sides.bottom_right_count"
+                  data-number></label>
+          </div>
         </div>
       </div>
-    </div>
-  </details>
+    </details>
 
-  <script src="/app.js"></script>
-</body>
+    <div class="toast" id="toast" hidden></div>
+
+    <script src="/app.js"></script>
+  </body>
+
 </html>

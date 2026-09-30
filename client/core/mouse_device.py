@@ -83,7 +83,9 @@ class RevengerST:
                 dev = hid.device()
                 dev.open_path(infos[0]["path"])
             except Exception as e:
-                self.status = f"accès à la souris refusé : {e}"
+                self.status = ("accès à la souris refusé : autorise « Surveillance de l'entrée » pour Ambilight "
+                               "(Réglages › Confidentialité et sécurité)")
+                print(f"[souris] ouverture HID impossible : {e}")
                 return False
             self._dev = dev
             self._regs.clear()

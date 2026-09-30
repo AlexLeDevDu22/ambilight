@@ -29,6 +29,12 @@ except Exception:  # PortAudio absent
     sd = None
     SD_OK = False
 
+# Détection des kicks : moyenne de référence des basses, rapport et niveau min.
+BEAT_AVG = 0.015
+BEAT_RATIO = 1.25
+BEAT_MIN = 0.35
+BEAT_RISE = 1.6   # montée brutale en ~20 ms (un kick) ≠ basse qui ondule lentement
+
 N_BANDS = 16
 WINDOW = 2048
 BLOCK = 512
@@ -147,6 +153,7 @@ class AudioAnalyzer:
         self._band_peak = np.full(N_BANDS, 1e-3, dtype=np.float32)
         self._peaks = {"bass": 1e-3, "mid": 1e-3, "high": 1e-3, "rms": 1e-4}
         self._bass_avg = 0.0
+        self._bass_hist = [0.0, 0.0, 0.0]
         self._high_prev = np.zeros(int(self._high_bands.sum()), dtype=np.float32)
         self._flux_avg = 0.0
         self._clock = 0.0
@@ -207,11 +214,13 @@ class AudioAnalyzer:
             spectrum = spectrum * 0.0
 
         # --- Kick : basse nettement au-dessus de sa moyenne récente
-        self._bass_avg = self._bass_avg * 0.97 + bass_raw * 0.03
+        self._bass_avg = self._bass_avg * (1 - BEAT_AVG) + bass_raw * BEAT_AVG
         ratio = bass_raw / (self._bass_avg + 1e-6)
+        rise = bass_raw / (min(self._bass_hist) + 1e-6)
+        self._bass_hist = self._bass_hist[1:] + [bass_raw]
         beat_strength = st["beat_strength"] * 0.9
         beat_count = st["beat_count"]
-        if not silent and ratio > 1.35 and bass > 0.45 and now - self._last_beat > 0.14:
+        if not silent and ratio > BEAT_RATIO and rise > BEAT_RISE and bass > BEAT_MIN and now - self._last_beat > 0.14:
             self._last_beat = now
             beat_count += 1
             beat_strength = min(1.0, 0.15 + 0.2 * float(np.log2(ratio)) + 0.35 * bass)

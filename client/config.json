@@ -1,21 +1,22 @@
 {
   "leds": {
-    "mode": "screen",
-    "sound_effect": "pulse",
+    "mode": "ambient",
+    "sound_effect": "ripples",
     "ambient_effect": "flow",
     "palette": "cover",
     "brightness": 1.0,
-    "sensitivity": 0.75,
+    "sensitivity": 2.5,
     "speed": 1.0,
     "smoothing": 0.5,
+    "letterbox": true,
     "colors": [
-      "#ff2820",
-      "#00d4ff"
+      "#0033ff",
+      "#00ffcc"
     ]
   },
   "mouse": {
     "mode": "sound",
-    "sound_effect": "spin",
+    "sound_effect": "pulse",
     "palette": "cover",
     "brightness": 1.0,
     "sensitivity": 2.5,
@@ -30,7 +31,7 @@
   "hardware": {
     "serial_port": "auto",
     "screen_index": 0,
-    "fps": 30,
+    "fps": 60,
     "gamma": 2.0,
     "saturation": 1.6,
     "border_depth_px": 300,
@@ -41,6 +42,9 @@
       "left_count": 19,
       "bottom_right_count": 0
     }
+  },
+  "general": {
+    "smart_sleep": true
   },
   "run": {
     "leds": true,

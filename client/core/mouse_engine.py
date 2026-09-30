@@ -63,6 +63,7 @@ class MouseEngine:
         self.running = False
         self.status = "arrêtée"
         self.preview = {"ring": {"type": "direct", "color": "#000000"}, "wheel": "#000000", "logo": "#000000"}
+        self.strip = None  # moteur du ruban (mode synchro « Ruban »)
 
     # ------------------------------------------------------------------
 
@@ -114,7 +115,8 @@ class MouseEngine:
                     if not self._dev.connected:
                         if now - last_connect_try > 1.0:
                             last_connect_try = now
-                            self._dev.open()
+                            if self._dev.open():
+                                st.wipe.restart()  # animation d'allumage une fois la souris là
                         if not self._dev.connected:
                             self.status = self._dev.status
                             self._inputs.drain()
@@ -135,6 +137,8 @@ class MouseEngine:
                         self.status = f"{self._dev.status} · réactif : {self._inputs.status}"
                     elif mode == "sound":
                         self.status = f"{self._dev.status} · {self._audio.status}"
+                    elif mode == "sync" and (self.strip is None or self.strip.shared is None):
+                        self.status = f"{self._dev.status} · synchro : allume le ruban"
                     else:
                         self.status = self._dev.status
                 except Exception as e:
@@ -146,8 +150,34 @@ class MouseEngine:
                 if spare > 0:
                     self._stop.wait(spare)
         finally:
+            try:
+                self._outro(st)
+            except Exception as e:
+                print(f"[mouse] extinction : {e}")
             if audio_on:
                 self._audio.release()
+
+    def _outro(self, st: "_State"):
+        """Extinction : un flash blanc balaie la souris de l'arrière vers
+        l'avant (sens inverse de l'allumage) et laisse le noir derrière lui."""
+        if not self._dev.connected:
+            return
+        brightness = self._store.get()["mouse"]["brightness"]
+        last = st.wipe.last
+        t0 = time.perf_counter()
+        while True:
+            p = (time.perf_counter() - t0) / 0.5
+            if p >= 1.0:
+                break
+            p = p * p * (3 - 2 * p)
+            front = 1.1 - 1.2 * p  # arrière → avant
+            out = {}
+            for zone, pos in MouseWipe.POS.items():
+                gone = min(1.0, max(0.0, (pos - front) / 0.08 + 0.5))  # 1 une fois le front passé
+                white = math.exp(-((front - pos) / 0.12) ** 2) * (1.0 - 0.25 * p)
+                out[zone] = np.clip(last[zone] * (1 - gone) + white, 0, 1)
+            self._output(st, {"ring": ("direct", out["ring"]), "wheel": out["wheel"], "logo": out["logo"]}, brightness)
+            time.sleep(1 / FPS)
 
     # ------------------------------------------------------------------
     # Rendu
@@ -230,7 +260,23 @@ class MouseEngine:
             ring = ("direct", pal.sample(pingpong(p - 0.12), cyclic=False) * lum(0.9))
             logo = pal.sample(pingpong(p - 0.24), cyclic=False) * lum(1.8)
 
-        elif mode == "breathe":
+        elif mode == "sync" and self.strip is not None and self.strip.shared is not None:
+            # Synchro « Ruban » : la souris prolonge le ruban posé autour de
+            # l'écran — contour = bas du ruban, molette = côté gauche, logo = haut.
+            # (moyenner les deux côtés donnerait du gris avec des couleurs opposées)
+            colors, pos = self.strip.shared
+            if len(colors) == len(pos) and len(pos):
+                x, y = pos[:, 0], pos[:, 1]
+                zones = {"ring": y > 0.99, "wheel": (y > 0.01) & (y < 0.99) & (x < 0.5), "logo": y < 0.01}
+                for zone, sel in zones.items():
+                    c = colors[sel].mean(axis=0) if sel.any() else colors.mean(axis=0)
+                    luma = float(c @ np.array([0.3, 0.59, 0.11], dtype=np.float32))
+                    c = np.clip(luma + (c - luma) * 1.3, 0, 1)  # la moyenne ternit : on ravive
+                    st.sync[zone] = st.sync[zone] + (c - st.sync[zone]) * min(1.0, dt * 12)
+            ring = ("direct", st.sync["ring"].copy())
+            wheel, logo = st.sync["wheel"].copy(), st.sync["logo"].copy()
+
+        elif mode == "breathe" or mode == "sync":  # (synchro sans ruban allumé → respiration)
             rate = 0.5 + speed * 1.6
             drift = t * (0.015 + speed * 0.04)
             b = lambda ph: 0.12 + 0.88 * (0.5 - 0.5 * math.cos(t * rate + ph)) ** 1.4
@@ -324,6 +370,12 @@ class MouseWipe:
         self.prev: dict | None = None
         self.last = {"ring": np.zeros(3, np.float32), "wheel": np.zeros(3, np.float32), "logo": np.zeros(3, np.float32)}
 
+    def restart(self):
+        """Rejoue l'allumage depuis le noir (souris (re)connectée)."""
+        self.prev = {k: np.zeros(3, np.float32) for k in self.last}
+        self.t0 = None
+        self.t_trigger = -10.0
+
     @staticmethod
     def _ring_rgb(ring) -> np.ndarray:
         if ring[0] == "flow":
@@ -384,6 +436,7 @@ class _State:
         self.react_until = 0.0
         self.react_cw = True
         self.react_speed = 1
+        self.sync = {z: np.zeros(3, np.float32) for z in ("ring", "wheel", "logo")}
         self.flash_env = {"wheel": 0.0, "logo": 0.0}
         self.flash_col = {"wheel": np.ones(3, dtype=np.float32), "logo": np.ones(3, dtype=np.float32)}
 
